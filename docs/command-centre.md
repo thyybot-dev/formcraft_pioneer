@@ -28,3 +28,16 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
 
 ## Testing
 `node tools/test_command_centre.js` with Playwright: loads the page with the fake runtime, clicks through every page and the main actions, and fails on any page error.
+
+
+## AI hub and memory (added October 2026)
+
+- **Page:** AI hub and memory, under Build and AI.
+- **Agents:** a general agent plus 7 area agents. Each has a model tier, an autonomy level (L0 to L4) and extra instructions. You can pick the agent in the floating AI panel.
+- **Collections:**
+  - `memory`: long-term memory. Fields: text, kind, scope, pinned, archived.
+  - `ailog`: short-term memory. Fields: agent, q, a, at, done.
+- **AI tools:** read_data, propose_actions, remember, recall.
+- **Handover pack:** JSON or Markdown, used to switch AI provider.
+- **MCP manifest:** a download from the AI hub page.
+- See `docs/architecture-ai-hub.md` and `mcp-server/`.
