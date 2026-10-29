@@ -1,0 +1,7 @@
+exec(open('sim5.py').read().split("out={'combos'")[0])
+W=copy.deepcopy(V); W['ta'].update(p=0.4,start=2028,ramp=[0.01,0.04,0.12,0.3],g1=0.35,n1=6,g2=0.12,sd=0.8)
+tot,per=run(W,seed=2)
+s=stats(tot); print('market-first',s['p2072'],s['med'])
+a=per['ta'][:,2036-Y0]; print('alive36',np.mean(a>0), [round(float(np.percentile(a[a>0],q)),2) for q in (10,50,90)])
+c=np.cumsum(per['ta'],axis=1)[:,-1]; print('ta cum p50 p90 among launched',np.percentile(c[c>0],[50,90]))
+json.dump({'p2072':s['p2072'],'med':s['med'],'alive36':float(np.mean(a>0)),'cond36':[round(float(np.percentile(a[a>0],q)),2) for q in (10,50,90)]},open('ta_opt.json','w'))
