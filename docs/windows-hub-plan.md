@@ -2,7 +2,9 @@
 
 *Written 30 October 2026. Owner: Emlyn (development and the main PC).*
 
-The Formcraft Hub is the Windows app that runs Formcraft. Each founder has it, and all three copies stay in sync. It holds all Formcraft data: projects, registers, money, people, social posts, newsletters and the website. It connects to AI models, offline or in the cloud, and it is the MCP hub that every app connects through, so Formcraft can run on automations. Each founder has a role in monitoring and checking the AI's work. Emlyn's PC is the main hub. It also does development, runs the Revit jobs and hosts the local AI model.
+The goal is a **fully automated business**. People approve, check, handle exceptions and look after clients. Everything else runs as scripts, or as AI working through scripts.
+
+The Formcraft Hub is the Windows app that runs Formcraft. **Only the three founders have it**, and all three copies stay in sync. Employees use the **web version** (section 14). It holds all Formcraft data: projects, registers, money, people, social posts, newsletters and the website. It connects to AI models, offline or in the cloud, and it is the MCP hub that every app connects through, so Formcraft can run on automations. Each founder has a role in monitoring and checking the AI's work. Emlyn's PC is the main hub. It also does development, runs the Revit jobs and hosts the local AI model.
 
 ## 1. Decisions
 
@@ -146,11 +148,11 @@ Estimates are part-time, for one developer.
 |---|---|---|---|
 | 0. Skeleton | 1–2 | The solution above. Service and tray app start with Windows. PostgreSQL installed and migrated. Sign-in with Firebase. Command Centre shown in WebView2 | Starts on boot. Restarts after a crash. Sign-in works for all three founders |
 | 1. Data and sync | 3–5 | Firestore ↔ PostgreSQL mirror, change log, outbox, roles, nightly backups | Edit on one hub shows on the others within 5 seconds. 50 offline edits all sync in order. A restore drill passes |
-| 2. Approvals and the monitor | 6–7 | Shared approval queue with risk rules and the second-founder check, monitor screen, weekly review sampling | A high-risk action waits for two founders. The monitor matches Firestore |
-| 3. Models and agents | 8–9 | Model router (Ollama 7–8B and cloud), the 8 agents, memory and handover in the service | Works with no internet using the local model. Falls back to the cloud. Unloads the model when Revit starts |
+| 2. Approvals and the monitor | 6–7 | Shared approval queue with risk rules and the second-founder check, monitor screen, weekly review sampling, the purpose and context pack format (15.1), and the ledger | A high-risk action waits for two founders. The monitor matches Firestore |
+| 3. Models and agents | 8–9 | The level router (15.2), escalation, answer cache, budgets, employee AI requests run as jobs, the 8 agents, memory and handover | Works with no internet using the local model. Falls back to the cloud. Unloads the model when Revit starts |
 | 4. MCP hub and Revit | 10–12 | Connection registry, the hub's MCP server, two Revit windows with their own queues, router, lease and failover | Jobs run in parallel on both Revits. A frozen Revit's jobs move to the other. Turning the main PC off hands cloud jobs to the standby |
 | 5. Content and website | 13–15 | Social calendar and posting, newsletters, website publishing, enquiries, orders | A post goes from draft to posted with metrics. A newsletter sends with unsubscribe. A website edit goes live without a redeploy |
-| 6. Development room and installer | 16–18 | GitHub, test runs, builds and releases, Velopack installer and auto-update | A one-click test run is stored. An update reaches all three hubs |
+| 6. Development room and installer | 16–18 | GitHub, test runs, builds and releases, script promotion (15.4), balance measures, Velopack installer and auto-update | A one-click test run is stored. An update reaches all three hubs |
 
 **Gate before phase 4:** all three founders use phases 0–3 at least 5 days a week (the 60-day habit check).
 
@@ -213,3 +215,109 @@ Estimates are part-time, for one developer.
 4. Move the casework and ceilings outputs with hub phase 5.
 
 Each move ends by removing the old screen from the plugin, so nothing exists in two places.
+
+
+## 14. Who uses what: founders' apps and employees' web version
+
+| | Founders (3) | Employees |
+|---|---|---|
+| App | Formcraft Hub for Windows | The web version (`command-centre/standalone`), installable on PCs and phones |
+| Data | Local PostgreSQL copy, synced with Firestore | Firestore directly, with an offline cache on the device |
+| Screens | Everything their role allows, plus the hub screens (monitor, approvals, connections, models, development on the main PC) | Only their role's screens: Site, Sales and content, Finance, Design and BIM, or Staff, with only their own tasks and registers |
+| AI | Through the hub's router | **Never holds an AI key.** Each AI request becomes a job in Firestore `jobs`. The main hub runs it on the cheapest path within the employee's role budget. If the hub is off, the standby hub or a Firebase Function runs the cloud levels |
+| Access | Service account in the hub. The hub applies roles and logs every change | Firestore rules apply to every read and write. No admin data is reachable |
+| Typical work | Approving, checking, development, clients, strategy | Doing their role's tasks, logging site work and photos, answering what automations cannot, sending exceptions up |
+
+Adding an employee:
+1. They sign in once on the web version.
+2. A founder gives them a role in the hub.
+3. Their screens, tasks, AI budget and approval rights follow from the role.
+
+When someone leaves, removing the role closes everything at once.
+
+## 15. The cheapest path: scripts first, AI as the bridge
+
+**Rule.** For every task, use the cheapest thing that can do it correctly. A script beats a model. A small offline model beats a large one. A large model is for reasoning, development and review. AI uses scripts as its tools and acts as the bridge between them, so most work is exact, repeatable and free.
+
+### 15.1 Every connection declares its purpose
+
+Every call into the hub carries a request: from an agent, Claude Desktop, the Revit pane, an employee on the web version, or an automation. The Revit MCP server and the hub share this one format.
+
+```json
+{
+  "purpose": "chase invoice FMC-INV-0142 that is 30 days overdue",
+  "intent": "finance.invoice.chase",
+  "area": "finance",
+  "started_by": "ai | person | job | schedule | web",
+  "agent": "finance",
+  "project": "F26001",
+  "risk": "low | medium | high",
+  "budget_usd": 0.05
+}
+```
+
+The hub replies with a context pack before any work starts. It holds references and short extracts, never data dumps:
+
+```json
+{
+  "task_id": "T-2026-11-0042",
+  "scripts": [{"id": "fin.invoice_reminder", "inputs": ["invoice_id", "channel"], "tested": true}],
+  "tools": ["read_register", "draft_message", "propose_actions"],
+  "memory": ["Client prefers WhatsApp (sales, 2026-10-12)", "Never threaten stop-work before 45 days (rule)"],
+  "rulebook": "rulebooks/agents/finance.md#invoices",
+  "journal": "Last chase 2026-10-15 by email, no reply",
+  "level": 0,
+  "limits": {"max_level": 4, "budget_usd": 0.05, "approval": "owner"}
+}
+```
+
+When the task ends, the hub writes the journal note, any lesson to memory, and a ledger line: purpose, intent, level used, escalations, cost, time, result. It reuses the Revit server's call ledger format, with `started_by` extended to `web`.
+
+### 15.2 The levels
+
+| Level | Runs on | Does | Cost |
+|---|---|---|---|
+| 0. Scripts and tools | Code | Anything already scripted | Free |
+| 1. Rules and lookups | Code: hash tables of intent → script, templates, formulas, regex | Routing, matching, filling templates | Free |
+| 2. Worker bots | 3–4B, offline | Sorting, tagging, extracting fields, filling script inputs. Output must pass a schema | Free |
+| 3. Area agents | 7–8B, offline | Drafts, summaries, simple tool chains, first-line replies | Free |
+| 4. Senior agents | Mid cloud model | Client-facing writing, multi-step reasoning, what level 3 failed | Low |
+| 5. Chief, developer, reviewer | Top cloud model | Planning, writing scripts and tests, development, hard reasoning, reviewing | Highest, used least |
+
+**Routing**
+1. Look up the intent in the script table. If a tested script exists, run it, with level 2 filling inputs if needed.
+2. Otherwise, start at the lowest level allowed for the intent (a table kept in the hub) and check the result.
+3. On a failed check, go up one level, up to `max_level`. Every escalation is logged with its reason.
+4. If the budget runs out, stop and ask the owning founder. Never overspend silently.
+
+### 15.3 Checks: nobody grades their own work
+
+| Work by | Checked by |
+|---|---|
+| Scripts | Their tests on every change. Promoted scripts carry their tests |
+| Levels 2–3 | Schema check every time. A sample (10% to start) is reviewed by level 4–5 from a different model family |
+| Levels 4–5 | The reviewer model on medium and high risk, then the owning person |
+| High risk (money, contracts, releases, Revit model changes) | Always a founder. Two founders above USD 500 |
+
+### 15.4 Promotion: AI work becomes scripts
+
+- The ledger groups AI runs by intent. When an intent has been done by AI 3 times with similar inputs, the developer agent (level 5) writes a script plus tests from those runs. It names inputs and outputs and refuses edge cases instead of guessing.
+- Emlyn approves it in the development room. It joins the script table at level 0.
+- A promoted script that later fails a check is paused, and the intent goes back to AI until the script is fixed.
+
+### 15.5 Keeping it cheap
+
+- **Answer cache:** a hash of intent, inputs and context version maps to a stored answer. A repeat costs nothing.
+- **Context diet:** tools return only the fields asked for. No whole-database dumps. The Command Centre's current 60,000-character context per question is retired.
+- **Budgets:** a monthly AI budget per agent and per employee role. At 80% of a budget, routing drops one level, except for high-risk work.
+- **Offline first:** levels 2–3 run on the main PC whenever Revit isn't busy there.
+
+### 15.6 Measures (weekly, on the monitor and in the Friday report)
+
+| Measure | Target |
+|---|---|
+| Share of runs done by scripts (levels 0–1) | 50% by month 6, 80% by month 18 (KISIC baseline: 63% of calls were AI-written code) |
+| Cost per task and AI spend per month | Falling each quarter |
+| Escalation rate by intent | Under 10%. Higher marks the next script to write |
+| Serious error rate in reviewed samples | Under 2% |
+| Automation share of all business tasks (runs without a person) | Rising every month. This is the "fully automated business" measure |
