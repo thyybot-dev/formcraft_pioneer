@@ -330,3 +330,61 @@ When the task ends, the hub writes the journal note, any lesson to memory, and a
 - **Paid standards stay with their licence holder.** Copies Formcraft buys are for Formcraft's own use under their licence terms.
 - **Opportunity:** ask UNBS, KEBS and the East African standards office about a reseller, affiliate or library-access arrangement. The bank sends buyers to them, which can earn a referral income and makes access easier for professionals.
 - *Planning note, not legal advice: confirm the licence terms with each publisher.*
+
+## 17. Voice: talk to the system, voice notes and automated calls
+
+**The idea.** Talking is the fastest way to run the business. Founders and staff speak or send voice notes. The system transcribes, understands and acts, and it can answer back in speech: each founder's own hub answers in that founder's voice. Calls to suppliers, contractors, craftsmen and professionals that only confirm or update facts become automated.
+
+### 17.1 Parts
+
+| Part | How | Cheapest path |
+|---|---|---|
+| Transcription (speech to text) | Offline Whisper (whisper.cpp or faster-whisper) on the main PC. Small and medium models fit a 4 GB graphics card. A cloud service for heavy loads. Luganda and other local languages: test Ugandan language models (for example Sunbird AI's) against Whisper | Transcription is a tool, not a model decision. A small model then sorts what was said into tasks, notes, logs or questions |
+| Voice notes in | WhatsApp voice notes to the business number. Voice recording in the hub and the web version (the browser's recorder). Meeting recordings | Each note becomes a transcript, then an intent, then the script that handles it (task, site diary, price, lead). Only unclear notes go to a bigger model |
+| Voice out (text to speech) | Offline speech engine on the main PC for routine replies. Cloud voices for quality | Short spoken answers. Long answers go to the screen |
+| Founders' own voices | Each founder records a consented voice sample. A voice model is made per founder, stored encrypted on that founder's PC and in the cloud vault only | Used for replies to that founder, and for calls only where 17.3 allows |
+| Phone calls | A telephony provider with a voice API covering Uganda (for example Africa's Talking, or Twilio) | Scripted calls first: recorded prompts with keypad or short spoken answers. Conversational AI calls only when a script cannot cover the questions |
+
+### 17.2 What automated calls do
+
+| Call | Asks | Updates |
+|---|---|---|
+| Supplier price check | "Is cement still UGX 34,000 a bag? Is it in stock? Delivery time?" | The price book. Changes over 5% go to review before quotes use them |
+| Directory check (every 6 months, or when data is missing) | "Are you still a town planner? Still serving Kira and Wakiso? Any change to your firm or registration?" and the missing fields | The professionals, contractors, craftsmen and suppliers registers |
+| Consent to show the number | "May we show this number on Formcraft's website so architects can reach you?" | Sets the listing to Confirmed, with the date and the recording or transcript as the consent record |
+| Delivery and site confirmations | "Is tomorrow's 8 am delivery to Ggaba still on?" | Purchase orders and the site diary |
+| Payment received | "We received UGX 2,000,000 for invoice 0142. Thank you." | Invoice status (it never asks for money or bank details) |
+
+**SMS fallback.** No answer after two tries means an SMS asking for a YES or NO reply.
+
+### 17.3 Rules for calls and cloned voices
+
+1. **Say it's automated.** Every call opens with "This is Formcraft's automated assistant calling for Emlyn". A founder's voice may be used, but the call never pretends to be the founder live. This protects trust and keeps Formcraft on the right side of privacy and consumer rules (Uganda's Data Protection and Privacy Act 2019 requires telling people about recording and the purpose).
+2. **Consent and opt-out.** People are told the call is recorded, and why. "Don't call me again" is honoured at once and kept on a do-not-call list.
+3. **Calling hours.** Weekdays 9:00–17:00. At most two attempts per round.
+4. **A cloned voice never authorises anything.** No payments, no changes to bank details, no contract terms. This applies inside Formcraft too: staff are told that a voice message is never approval, and any request to move money is checked in the hub's approval queue. A cloned voice is a fraud risk if it leaks, so voice models stay encrypted and are never shared.
+5. **Founders' consent.** Each founder agrees in writing to their voice being cloned and to how it is used, and can withdraw.
+6. **The cheapest path applies.** Scripted calls first. Conversational AI only for open questions. A person takes over when the call is unclear.
+
+### 17.4 Impact on the system
+
+- **New collections:**
+  - `calls`: purpose, who, script, transcript, outcome, consent, cost and the recording link.
+  - `voice_notes`.
+  - `do_not_call`.
+  - `voices`: the voice model register (metadata only).
+- **Automations:**
+  - price checks: monthly for the top 30 materials;
+  - directory checks: on a 6-month rotation;
+  - consent calls: when a new listing is added;
+  - delivery confirmations: the day before.
+- **Cost:** transcription and speech are free offline. Calls cost per minute (check the provider's current rates). Scripted calls are short.
+- **Data quality:** registers stay current without staff time. Each record shows "last confirmed" and how (call, SMS, website).
+- **Hardware:** Whisper and the 7–8B model compete for the main PC's 4 GB graphics card. The hub queues transcription so they don't run at once, and moves heavy transcription to the cloud when the PC is busy.
+
+### 17.5 Build order
+
+1. Transcription of voice notes and recordings, offline, into tasks and logs (with hub phase 3).
+2. Speaking to the hub and spoken replies, in a standard voice first, founder voices after written consent.
+3. Scripted calls through the telephony provider: price checks and directory checks, with the SMS fallback and consent recording (with hub phase 5).
+4. Conversational calls for open questions, after the scripted calls run reliably.
