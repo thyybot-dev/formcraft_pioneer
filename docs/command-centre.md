@@ -215,3 +215,11 @@ missing a quantity. "% of building" lines are shares of the architecture and str
 `kit-import.json` is published next to the app. On the owner's first open after a new `_version`, the app writes its
 records (price book, standards register, suppliers, knowledge base, kit, tasks, the Ogala project and its estimate).
 Team and access has "Reload kit, standards and price data". Built by `data/kit-import/populate.py`.
+
+### Estimate cost explorer (same as the Revit project report)
+Switches saved on the estimate (every founder sees the same scenario): each discipline in or out of the totals (e.g. fire
+and security off); cost parts materials, labour, plant, preliminaries and contingency; phase 1 or phase 1 and later.
+Presets: materials only, full cost, everything now, shell only (every free item later), reset. Every item and every group
+is Now, Later or Leave out; structure and shell items are locked in. Rates are split into materials, labour and plant
+(labour = full - materials - plant) from the packages' rate_mat and rate_plant. Each discipline panel shows its summary,
+key figures, design status checks and what it covers, from its package.
