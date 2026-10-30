@@ -166,3 +166,50 @@ Estimates are part-time, for one developer.
 1. Confirm the founders' roles and the USD 500 two-founder threshold.
 2. Which founder PC is the standby hub?
 3. Which email service sends the newsletters (for example Brevo, Mailchimp or Resend)?
+
+## 13. A simpler Revit plugin: what moves to the hub
+
+**Rule.** The plugin keeps only what needs the live model: the open document, the current view or selection, or a one-click action while modelling. Anything that is administration, settings, data, queues, reports or work across several apps moves out.
+
+**A caution about customers.** Formcraft Tools is also a product sold to other firms, and they will not have the hub. So the plugin must stay complete for paying customers on its own:
+- Internal controls move to the hub.
+- Customer account, licence and seat management move to the customer's account page on the website. Payments already happen there, never in Revit.
+
+| Area today (in the plugin) | Keep in Revit | Move to the hub (internal) | Move to the website account (customers) |
+|---|---|---|---|
+| Core: sign-in, account, connect, log, search | Sign-in, connection status light, search inside the model | Logs, connections and port registry, AI involvement levels, admin | Account, plan, invoices |
+| Admin: licences and seats | — | Issuing and checking licences (Formcraft side), feature switches | Seats and licence keys for the customer's own team |
+| Settings (General, Manage, Flow, Model, Build) | 3–5 per-user basics: theme, units, touch on/off | Company standards, defaults, rules, folder maps, pushed to every plugin | — |
+| Manage: templates, families, issue, review, workshare, links, QA, rules, reports | Apply template, load family, place, check this model, issue sheets from this model | Template and family library management, the family factory queue and Gate A results, issue and review registers, QA dashboards, rules editor, reports | Family store downloads |
+| Check › Automation, Scripts | Run a script on this model | Script library, schedules, automation runs, AI-versus-script balance | — |
+| Flow: sheets, annotate, touch, overlays, gestures | All of it (it is in-model work) | — | — |
+| Model: start from brief, systems, structural | Modelling steps | The brief itself, held with the project in the hub | — |
+| Engineer: casework and ceilings (steps 1–4) | Room, options, checks and dry run, unit and feature editing | Step 5 outputs: workshop pack, cut lists, nesting, cost, set-out, BoQ, which feed procurement and the workshop | — |
+| Engineer: options | Showing options in the model | Comparing options and decisions | — |
+| Build: Build pane, web workspace | Revit views for cost and 4D | The cost and BoQ workspace (built on the price book), which is already a web workspace | — |
+| Engineering hub (Navisworks, Rhino, Robot, Power BI, exchange) | — | All orchestration: federating, clash runs, Rhino exchange, Power BI feeds | — |
+
+**The plugin after the split**
+- **Ribbon:** four groups: Model, Flow, Engineer, Check.
+- **Pane:** five pages.
+  - **Now:** this model's status, open jobs from the hub and quick tools.
+  - **Model**, **Flow** and **Engineer**.
+  - **Check:** run checks on this model. Results go to the hub.
+- **Ask:** the AI working on this model, through the hub when it is running, or directly for customers.
+- **Settings:** a few personal settings. Company settings arrive from the hub, or from the website account for customers.
+
+**What this gains**
+- Lighter add-in: faster Revit start-up and fewer things that can fail inside Revit.
+- Fewer screens to rebuild and test for each Revit version (2020–2026).
+- One place for settings and data across the three founders.
+- A cleaner product for customers.
+
+**How the two talk.** The existing local socket per Revit window (ports 8080–8089) through the Revit MCP server. The hub pushes settings and jobs. The plugin sends results, checks and events: model opened, saved, synced.
+
+**Order of work**
+1. Move administration and settings (licences, AI involvement, logs, connections) once hub phase 1 is done.
+2. Move registers, QA dashboards and the script library with hub phase 2.
+3. Move the engineering hub orchestration and the Build workspace with hub phase 4.
+4. Move the casework and ceilings outputs with hub phase 5.
+
+Each move ends by removing the old screen from the plugin, so nothing exists in two places.
