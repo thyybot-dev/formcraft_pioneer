@@ -59,7 +59,7 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
   - the morning brief;
   - the approval queue;
   - one live register: the sales pipeline, projects or client journeys;
-  - the 60-day habit check. The rule: each founder opens the Command Centre at least 5 days a week. If they all do, expand the system; if not, stop building and fix the habit.
+  - the 60-day review check. The agents do the work and the founders review it. The rule: every AI proposal gets a decision within 24 hours and nothing waits more than 48 hours. If reviews keep pace, give the agents more work; if not, fix the review flow first. (This replaced the earlier "open it 5 days a week" rule on 30 October 2026.)
 - **Collections:**
   - `pending`: shared AI proposals. Fields: `a` (the action), status (pending, approved or rejected), agent, at, by, decided, decidedBy. Any founder on any device can approve or reject. The MCP server accepts the same shape.
   - `usage`: one record per person per day they open the app. It feeds the habit check.

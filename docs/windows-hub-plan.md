@@ -154,11 +154,11 @@ Estimates are part-time, for one developer.
 | 5. Content and website | 13–15 | Social calendar and posting, newsletters, website publishing, enquiries, orders | A post goes from draft to posted with metrics. A newsletter sends with unsubscribe. A website edit goes live without a redeploy |
 | 6. Development room and installer | 16–18 | GitHub, test runs, builds and releases, script promotion (15.4), balance measures, Velopack installer and auto-update | A one-click test run is stored. An update reaches all three hubs |
 
-**Gate before phase 4:** all three founders use phases 0–3 at least 5 days a week (the 60-day habit check).
+**Gate before phase 4:** the founders' reviews keep pace with the agents, meaning every AI proposal is decided within 24 hours and nothing waits more than 48 hours (the 60-day review check). Founders are not expected to do tasks by hand.
 
 ## 11. Risks
 
-- **Scope.** This is a large build for one developer. Build in phase order, ship each phase to the founders, and don't start phase 4 before the habit gate.
+- **Scope.** This is a large build for one developer. Build in phase order, ship each phase to the founders, and don't start phase 4 before the review gate.
 - **Service account power.** The hub's Firestore credentials skip the access rules. Keep them in Credential Manager, give them only the Firestore user role, have the hub enforce roles itself, and log every write in the change log.
 - **Platform APIs.** Social and email APIs change and need app review (Meta in particular). Allow time, and keep manual posting as a fallback.
 - **Single main PC.** Revit and local-AI work stop when it is off. Critical cloud jobs keep running through the standby hub and Firebase Functions.
