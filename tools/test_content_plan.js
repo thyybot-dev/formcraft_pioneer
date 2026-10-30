@@ -1,0 +1,13 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1440,height:950}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
+const clk=async s=>{await p.$eval(s,e=>e.click());await p.waitForTimeout(400);};
+await p.goto('file:///tmp/pt/index4.html#cplan');await p.waitForTimeout(3000);
+await clk('[data-cphol]');await p.waitForTimeout(800);await clk('[data-cpai]');await p.waitForTimeout(800);
+await p.fill('form[data-f=cpadd] input[name=title]','Kira site walk');await clk('form[data-f=cpadd] button');
+console.log('rows this month',await p.$$eval('[data-cpst]',x=>x.length));
+await clk('[data-cpopen]');await p.fill('form[data-f=cpedit] input[name=hook]','Walk the slab with us');await clk('form[data-f=cpedit] button');
+await p.selectOption('[data-cpst]','Approved');await p.waitForTimeout(300);
+console.log('cards',await p.evaluate(()=>[...document.querySelectorAll('.kpi')].slice(0,4).map(e=>e.innerText.replace(/\s+/g,' '))));
+await clk('[data-cpm="2026-12"]');console.log('dec rows',await p.$$eval('[data-cpst]',x=>x.length));
+await clk('[data-cpcsv]');await p.screenshot({path:'cplan.png'});
+console.log('ERR',JSON.stringify(errs));await b.close();})();

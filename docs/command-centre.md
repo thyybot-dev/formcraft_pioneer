@@ -90,3 +90,33 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
 - **Add sections:** paste text from a PDF you own, and the AI splits it into sections. For standards, the pasted wording is never saved. New sections start hidden until checked.
 - **Collection** `std_clauses`. Its fields are std or source, kind, juris, ref, page, heading, topics, summary, values, text (laws only) and pub.
 - **No PDF files are ever shared.** Each standard records its licence (`licence` field). The website shows only references, page numbers, Formcraft's explanations and buy links.
+
+## Ratings, AI workforce, year content plan and quick logging (October 2026)
+
+- **Log by hand.** The "+ Log" button in the header, on every page, logs:
+  - a task;
+  - money in or out (Admin, Manager and Finance roles only);
+  - a metric;
+  - a note or decision, optionally saved to AI memory;
+  - a lead;
+  - a site diary entry;
+  - a row in any register.
+
+  Everything logged this way is saved with `src: 'manual'`, so the automation share measure counts it as manual work.
+- **Professional ratings.**
+  - Referrals are logged per professional (`referrals`).
+  - Ratings cover speed, quality, communication and value, plus tags and a comment. They go to Contributions for review before they count (`pro_reviews`).
+  - A rating linked to a referral is marked verified. The website shows stars, top tags and the latest comments only once there are 3 or more approved reviews.
+  - Automation WS-08 asks for a rating 14 days after each referral.
+- **AI workforce** (under Build and AI, collection `aistaff`).
+  - The 27 planned roles across 7 departments, each with duties, tools, measures, the founder it reports to, a model size, an autonomy level, a monthly AI budget and the revenue level at which to hire a person.
+  - Each role is a selectable agent in the AI panel, with its own memory scope. Its proposals land in the shared queue under its key, and its scorecard counts tasks, proposals, approval rate and logged errors.
+  - **HR:** 30 days of probation, then a suggestion to raise or lower autonomy based on approval rate and errors.
+  - **Hiring a person** turns the role into their assistant and downloads a handover pack (role, memory, recent work).
+  - AI employees only act on work in their queues; they cost nothing when idle.
+- **Content plan (year)** (collection `cplan`).
+  - A 12-month strip showing items and ready items per month, and a month view filtered by channel and series.
+  - Statuses run Idea → Planned → Scripted → In production → Approved → Scheduled → Posted. Each item has a hook, script or caption, owner, asset link and notes.
+  - **AI: plan the next 12 months** adds Ideas following a set rhythm: 2 long YouTube videos a month, 3 Shorts a week, a weekly LinkedIn post, a monthly newsletter and holiday posters.
+  - A one-click button adds all public holidays. The plan downloads as an Excel file.
+  - Coverage measures show weeks covered out of 52 and holidays covered.

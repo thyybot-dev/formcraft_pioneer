@@ -1,0 +1,13 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1440,height:950}});const errs=[];p.on('pageerror',e=>errs.push(e.message));p.on('dialog',d=>d.accept('Grace'));
+const clk=async s=>{await p.$eval(s,e=>e.click());await p.waitForTimeout(400);};
+await p.goto('file:///tmp/pt/index.html#aistaff');await p.waitForTimeout(3000);
+await clk('[data-aiwseed]');await p.waitForTimeout(1500);
+console.log('roles',await p.$$eval('[data-aiwhire]',x=>x.length));
+await clk('[data-agopen="qs"]');console.log('selector has qs',await p.$eval('[data-agsel]',e=>e.value));
+await p.fill('#aiq','Update the BOQ for Ggaba');await p.$eval('form[data-f=ai] button:not([type])',e=>e.click());await p.waitForTimeout(1500);
+await p.$eval('[data-aiclose]',e=>e.click()).catch(()=>{});await p.waitForTimeout(300);
+console.log('qs row',await p.evaluate(()=>{const r=[...document.querySelectorAll('#view tr')].find(t=>t.innerText.includes('Quantity surveyor'));return r&&r.innerText.replace(/\s+/g,' ').slice(0,220);}));
+await clk('[data-aiwhire]');await p.waitForTimeout(500);console.log('hired',await p.evaluate(()=>document.querySelector('#view').innerText.includes('Grace')));
+await p.screenshot({path:'aiw.png'});
+console.log('ERR',JSON.stringify(errs));await b.close();})();
