@@ -63,6 +63,32 @@ for code, mats in std.items():
         summary=f"Referenced by {len(mats)} kit material(s). Title and status not yet checked against the UNBS catalogue (the kit notes UNBS blocked automated access)."))
 n_std = len(ops) - n_price
 
+# ---- the full standards bank (319 documents, revit-tools feat/frame-v2 scripts/standards/bank, 27-28 Oct) ----
+BANK = json.load(open('/tmp/stdb/bank.json'))
+DMAP = {'Structural': 'Structural', 'Geotechnical': 'Geotechnical', 'Fire safety': 'Fire', 'Electrical and lighting': 'MEP', 'Plumbing, drainage and water': 'Water', 'Mechanical, HVAC and lifts': 'MEP',
+        'Environment and sustainability': 'Energy', 'Accessibility': 'Accessibility', 'Site safety': 'Health and safety', 'Products: materials': 'Materials', 'Materials (UNBS)': 'Materials',
+        'Construction testing and tolerances': 'Materials', 'VDC and BIM management': 'BIM and information', 'BIM data and classification': 'BIM and information', 'CAD and drawing production': 'BIM and information',
+        'BIM and documentation': 'BIM and information', 'Revit, Robot and Navisworks': 'BIM and information', 'Products: data for families': 'BIM and information', 'Commissioning and handover': 'BIM and information'}
+def sbody(t):
+    for p, b in (('ISO', 'ISO'), ('IEC', 'IEC'), ('EN ', 'EN (Eurocode)'), ('Eurocode', 'EN (Eurocode)'), ('BS ', 'BS'), ('ASTM', 'ASTM'), ('ACI', 'ACI'), ('ASCE', 'ASCE'), ('NFPA', 'NFPA'), ('EAS', 'EAS'), ('KS ', 'KEBS'), ('KEBS', 'KEBS'), ('US ', 'UNBS (US)'), ('UNBS', 'UNBS (US)')):
+        if t.startswith(p) or (' ' + p) in (' ' + t[:12]): return b
+    return 'Other'
+CODE = re.compile(r'^((?:ISO/TS|ISO|IEC|EN|BS EN|BS|ACI|ASCE|NFPA|ASTM|US EAS|US|EAS|KS|TZS|RS|AS/NZS|AS|NZS|SANS|IS|GB|JIS|ICC A\d+)\s?[\w\-./:]+(?:[-\u2013]\d+)?)')
+seen = {x['data']['code'] for x in ops if x['path'].startswith('reg_standards/')}
+nb = 0
+for g, title, what, prio, cost, where, have in BANK:
+    m = CODE.match(title); code = (m.group(1) if m else title)[:90]
+    if code in seen: code = title[:90]
+    seen.add(code)
+    law = bool(re.search(r'\b(Act|Regulations?|Rules|Code 20\d\d|By-?laws?|Ordinance)\b', title))
+    lic = 'Public law or regulation' if law and cost == 'Free' else 'Free to download (link only)' if cost == 'Free' else 'Paid (our licensed copy only)'
+    yr = re.search(r'\b(19[5-9]\d|20[0-2]\d)\b', title)
+    put('reg_standards', 'bank-' + slug(title), dict(code=code, title=title, body=sbody(title), discipline=DMAP.get(g, 'Architecture'), year=yr.group(1) if yr else '', status='Current',
+        keywords=f"{g}; {prio}; {cost}; {'In the bank' if have else 'To get'}", summary=what, uses=f"Priority: {prio}. Group: {g}. {'Formcraft already has this document.' if have else 'Still to get.'}",
+        licence=lic, pub='No', buy=where))
+    nb += 1
+n_std += nb
+
 # ---- suppliers ----
 sup = collections.defaultdict(lambda: {'mats': [], 'cat': collections.Counter()})
 CATMAP = {'Masonry': 'Blocks and bricks', 'Ceramic': 'Blocks and bricks', 'Roofing': 'Roofing', 'Metal': 'Steel', 'Paint': 'Finishes', 'Plastic': 'Plumbing', 'Board': 'Timber', 'Timber': 'Timber', 'Tile': 'Finishes', 'Stone': 'Finishes', 'Glazing': 'Finishes', 'Window': 'Finishes', 'Electrical': 'Electrical'}

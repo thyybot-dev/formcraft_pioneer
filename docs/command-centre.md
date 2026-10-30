@@ -195,3 +195,23 @@ A 2D architecture canvas for the design stage, in the spirit of Rayon and AutoCA
   - Grok and DeepSeek use their OpenAI-compatible APIs.
   - Each provider's key is kept on that PC only.
   - If a provider or the internet fails, the offline model takes over automatically.
+
+## Project estimates (30 Oct 2026)
+
+Every project hub has an **Estimate**: lines by discipline (architecture, structure, plumbing, electrical, mechanical,
+interiors, fire and security, external works, landscape), each with quantity, unit, low / likely / high rates, a stage
+(Now, Later, Leave out) and a source (Price book, Formcraft method, model package, set by hand). Totals add preliminaries
+(12%) and contingency (10%), show phase 1 or phase 1 and later, cost per m², designed vs allowance, and lines still
+missing a quantity. "% of building" lines are shares of the architecture and structure total (plumbing, electrical).
+- **Start the estimate** builds the Formcraft method template (the same items and indicative rates as
+  `scripts/project/packages.py` in the Revit tools, `feat/frame-v2`); items found in the Price book are linked to it.
+- **Import model packages** reads the Revit project report's `01_WIP\_Report\packages\*.json` (and `report.json` for
+  preliminaries and contingency) and replaces that discipline's lines with the model's quantities.
+- **Update rates from the Price book** refreshes linked lines; **Excel (BoQ)** downloads a summary and the BoQ.
+- Data: `estimates/<project id>` and `est_lines`.
+
+## Kit data loads by itself
+
+`kit-import.json` is published next to the app. On the owner's first open after a new `_version`, the app writes its
+records (price book, standards register, suppliers, knowledge base, kit, tasks, the Ogala project and its estimate).
+Team and access has "Reload kit, standards and price data". Built by `data/kit-import/populate.py`.

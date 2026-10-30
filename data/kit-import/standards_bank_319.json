@@ -1,0 +1,2873 @@
+[
+[
+"Uganda",
+"Building Control Act 2013",
+"Permits, inspections, who approves",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Building Control Regulations 2020",
+"Permit process, forms, timelines",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Building Control fee schedule (gazetted) / KCCA plan fees",
+"Permit fees per m2",
+"Core",
+"Free",
+"Gazette, KCCA, municipal councils",
+true
+],
+[
+"Uganda",
+"Physical Planning Act 2010",
+"Development permission",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Physical Planning (Amendment) Act 2020 and Physical Planning Regulations",
+"Current committees, fees, forms",
+"Core",
+"Free",
+"ulii.org, MoLHUD",
+true
+],
+[
+"Uganda",
+"Public Health Act Cap 281 and Public Health (Drainage and Sanitation) Rules",
+"Drainage and WC rules split from the building rules",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Condominium Property Act 2001 and Regulations",
+"Apartments: unit plans, common property, approvals",
+"By building type",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Land Act, Registration of Titles Act, Survey Act",
+"Site title, boundaries, surveys",
+"Reference",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Local Governments Act",
+"Which council approves what",
+"Reference",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Roads Act / UNRA Act and Access to Roads Act",
+"Road reserves and access to plots",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Civil Aviation Authority obstacle rules (aerodrome regulations) and ICAO Annex 14",
+"Height limits near airports (Entebbe, Kajjansi)",
+"By building type",
+"Free",
+"caa.go.ug",
+true
+],
+[
+"Uganda",
+"Historical Monuments Act",
+"Heritage sites and buildings",
+"Reference",
+"Free",
+"ulii.org",
+true
+],
+[
+"Uganda",
+"Uganda Communications Commission mast guidelines",
+"Telecom masts on buildings",
+"By building type",
+"Free",
+"ucc.co.ug",
+true
+],
+[
+"Planning and site",
+"National Physical Planning Standards and Guidelines 2011",
+"Coverage, setbacks, parking by zone",
+"Core",
+"Free",
+"MoLHUD",
+true
+],
+[
+"Planning and site",
+"Local physical development plans (Kira, Wakiso, KCCA KPDP, each project's district)",
+"Height limits, plot ratio, zoning on the actual site",
+"Core",
+"Free",
+"The municipal or district council",
+true
+],
+[
+"Planning and site",
+"National Physical Development Plan (final)",
+"National corridors and buffers",
+"Reference",
+"Free",
+"MoLHUD",
+true
+],
+[
+"Planning and site",
+"MoWT Road Design Manual (geometric design)",
+"Access roads, junctions, parking geometry",
+"By building type",
+"Free",
+"works.go.ug",
+true
+],
+[
+"Planning and site",
+"MoWT Drainage Design Manual",
+"Rainfall intensity curves, site drainage",
+"Core",
+"Free",
+"works.go.ug",
+true
+],
+[
+"Architecture and building code",
+"National Building Code 2019",
+"Rooms, stairs, light, ventilation, services",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Architecture and building code",
+"Public Health (Building) Rules",
+"Legacy rules where the 2019 code is silent",
+"Reference",
+"Free",
+"ulii.org",
+true
+],
+[
+"Architecture and building code",
+"Neufert Architects' Data",
+"Space standards, furniture, circulation for every room type",
+"Core",
+"Paid",
+"Bookshops",
+false
+],
+[
+"Architecture and building code",
+"Metric Handbook (planning and design data)",
+"Building-type planning data",
+"Core",
+"Paid",
+"Bookshops",
+false
+],
+[
+"Architecture and building code",
+"BS 5395-1 stairs",
+"Stair geometry beyond the code",
+"Reference",
+"Paid",
+"BSI",
+false
+],
+[
+"Architecture and building code",
+"BS 6180 barriers and BS 6206 / EN 12600 safety glazing",
+"Guards, balustrades, glass in doors and low windows",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Architecture and building code",
+"BS EN 17037 daylight in buildings",
+"Daylight targets the 2019 code asks for (20-30%)",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Accessibility",
+"Building Control (Accessibility Standards) Code 2019",
+"Ramps, toilets, doors, signage",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Accessibility",
+"ISO 21542 / BS 8300-1 and -2",
+"Detail the Uganda code leaves to figures",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Fire safety",
+"BS 9999 (all buildings) and BS 9991 (dwellings)",
+"Escape widths, travel distances, compartments",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Fire safety",
+"BS 5839-1 and -6 fire alarms",
+"Alarm systems (empty in the Uganda codes)",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Fire safety",
+"BS 5266-1 emergency lighting and ISO 7010 safety signs",
+"Escape lighting and signs",
+"Core",
+"Paid",
+"BSI, ISO",
+false
+],
+[
+"Fire safety",
+"BS EN 12845 sprinklers / NFPA 13",
+"Sprinkler design for large buildings",
+"By building type",
+"Paid",
+"BSI, NFPA (free to read online)",
+false
+],
+[
+"Fire safety",
+"NFPA 101 Life Safety Code",
+"Alternative escape rules many clients ask for",
+"Reference",
+"Paid",
+"nfpa.org (free to read online)",
+false
+],
+[
+"Structural",
+"Uganda Structural Design Code 2019",
+"The statutory structural code",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Structural",
+"US 319 seismic code",
+"Seismic zones and base shear",
+"Core",
+"Paid",
+"UNBS",
+true
+],
+[
+"Structural",
+"EN 1990 basis of design",
+"Load combinations and factors",
+"Core",
+"Paid",
+"BSI, UNBS, law.resource.org",
+false
+],
+[
+"Structural",
+"EN 1991-1-1 densities and imposed loads",
+"Loads",
+"Core",
+"Paid",
+"law.resource.org",
+true
+],
+[
+"Structural",
+"EN 1991-1-4 wind",
+"Wind on roofs, gables, walls",
+"Core",
+"Paid",
+"law.resource.org",
+false
+],
+[
+"Structural",
+"EN 1991-1-2 fire actions, 1-6 execution, 1-7 accidental",
+"Fire loads, temporary works, impact",
+"Reference",
+"Paid",
+"law.resource.org",
+false
+],
+[
+"Structural",
+"EN 1992-1-1 concrete",
+"Concrete design",
+"Core",
+"Paid",
+"law.resource.org",
+true
+],
+[
+"Structural",
+"EN 1992-1-2 concrete fire",
+"Fire ratings of members",
+"Core",
+"Paid",
+"law.resource.org",
+true
+],
+[
+"Structural",
+"EN 1993-1-1, 1-3, 1-8 steel",
+"Roof trusses, cold-formed purlins, connections",
+"Core",
+"Paid",
+"law.resource.org",
+false
+],
+[
+"Structural",
+"EN 1994-1-1 composite",
+"Steel-concrete floors",
+"Reference",
+"Paid",
+"law.resource.org",
+false
+],
+[
+"Structural",
+"EN 1995-1-1 timber",
+"Timber roofs and floors",
+"Core",
+"Paid",
+"law.resource.org",
+false
+],
+[
+"Structural",
+"EN 1996-1-1, 1-2, 2 masonry",
+"Stone, block and brick walls",
+"Core",
+"Paid",
+"law.resource.org",
+false
+],
+[
+"Structural",
+"EN 1997-1 and -2 geotechnical",
+"Foundations and site investigation",
+"Core",
+"Paid",
+"law.resource.org",
+false
+],
+[
+"Structural",
+"EN 1998-1 and -5 seismic",
+"Ductile detailing, seismic foundations",
+"Core",
+"Paid",
+"law.resource.org",
+false
+],
+[
+"Structural",
+"Economic Concrete Frame Elements to EC2",
+"Economic member sizes",
+"Core",
+"Free",
+"concretecentre.com",
+true
+],
+[
+"Structural",
+"How to Design Concrete Structures using EC2 + Worked Examples to EC2",
+"Shear, punching, laps, worked through",
+"Core",
+"Free",
+"concretecentre.com",
+false
+],
+[
+"Structural",
+"IStructE Manual for concrete building structures to EC2 (2006)",
+"Whole design process",
+"Core",
+"Paid",
+"IStructE",
+false
+],
+[
+"Structural",
+"IStructE Standard Method of Detailing Structural Concrete",
+"Detailing and drawings",
+"Core",
+"Paid",
+"IStructE",
+true
+],
+[
+"Structural",
+"BS 8666 scheduling of reinforcement (full)",
+"Bar schedules",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Structural",
+"Steel Designer's Manual / Blue Book section tables",
+"Steel section properties",
+"Reference",
+"Paid",
+"SCI",
+false
+],
+[
+"Structural",
+"BS 8002 retaining walls and BS 8004 foundations",
+"Retaining walls on sloping Kampala sites",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Structural",
+"IStructE Design recommendations for multi-storey and underground car parks",
+"Car park structures",
+"By building type",
+"Paid",
+"IStructE",
+false
+],
+[
+"Geotechnical",
+"BS 5930 site investigation",
+"What to ask a soils lab for",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Geotechnical",
+"Geological map of Uganda / Kampala sheets",
+"Expected ground before investigation",
+"Reference",
+"Free",
+"Directorate of Geological Survey and Mines",
+true
+],
+[
+"Materials (UNBS)",
+"UNBS product standards: cement, steel bars, concrete blocks, burnt clay bricks, iron sheets, timber, tiles, paints, glass",
+"What can be specified and bought in Uganda",
+"Core",
+"Paid",
+"UNBS catalogue",
+false
+],
+[
+"Materials (UNBS)",
+"UNBS standards: PVC/HDPE pipes, electrical cables and accessories, LPG cylinders",
+"MEP products",
+"Core",
+"Paid",
+"UNBS catalogue",
+false
+],
+[
+"Materials (UNBS)",
+"EN 206 / BS 8500 concrete specification",
+"Concrete mixes and exposure",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Materials (UNBS)",
+"EN 13670 execution of concrete",
+"Site workmanship and tolerances",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Electrical and lighting",
+"Electrical Installations Code 2019",
+"Statutory wiring rules",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Electrical and lighting",
+"Electricity Act 1999 + Amendment 2022",
+"Licences and connections",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Electrical and lighting",
+"Electricity (Installation Permits) and (Safety Code) Regulations 2003",
+"Wiring permits, clearances to lines",
+"Core",
+"Free",
+"era.go.ug",
+true
+],
+[
+"Electrical and lighting",
+"BS 7671 IET Wiring Regulations",
+"Circuits, cable ratings, bathroom zones",
+"Core",
+"Paid",
+"IET",
+false
+],
+[
+"Electrical and lighting",
+"EN 12464-1 lighting of work places / SLL Code for Lighting",
+"Lux levels per room",
+"Core",
+"Paid",
+"BSI, CIBSE",
+false
+],
+[
+"Electrical and lighting",
+"BS EN 62305 lightning protection",
+"Lightning systems (high-risk in Uganda)",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Electrical and lighting",
+"TIA-568 / EN 50173 structured cabling",
+"Data and ICT rooms",
+"By building type",
+"Paid",
+"TIA, BSI",
+false
+],
+[
+"Electrical and lighting",
+"Solar PV: IEC 62548 and UNBS PV standards",
+"Rooftop solar",
+"By building type",
+"Paid",
+"IEC, UNBS",
+false
+],
+[
+"Mechanical, HVAC and lifts",
+"Mechanical Installations Code 2019",
+"Statutory plumbing, drainage, fire, lifts",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Mechanical, HVAC and lifts",
+"CIBSE Guide A environmental design",
+"Ventilation rates, comfort, climate data",
+"Core",
+"Paid",
+"CIBSE",
+false
+],
+[
+"Mechanical, HVAC and lifts",
+"CIBSE Guide B HVAC and Guide G public health",
+"System design",
+"Core",
+"Paid",
+"CIBSE",
+false
+],
+[
+"Mechanical, HVAC and lifts",
+"ASHRAE 62.1, 55, 90.1",
+"Ventilation, comfort, energy (US-led clients)",
+"Reference",
+"Paid",
+"ASHRAE (free to read online)",
+false
+],
+[
+"Mechanical, HVAC and lifts",
+"BS EN 81-20, -50, -70 lifts",
+"Lift shafts, pits, accessible lifts",
+"By building type",
+"Paid",
+"BSI",
+false
+],
+[
+"Mechanical, HVAC and lifts",
+"BS EN 378 refrigeration and heat pumps",
+"Split units and chillers",
+"By building type",
+"Paid",
+"BSI",
+false
+],
+[
+"Plumbing, drainage and water",
+"Water Act Cap 152 + Water Resources and Waste Discharge Regulations",
+"Connections, boreholes, discharge permits",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Plumbing, drainage and water",
+"Ministry of Water and Environment Water Supply Design Manual",
+"Demand, tanks, septic tanks, soakaways",
+"Core",
+"Free",
+"mwe.go.ug",
+true
+],
+[
+"Plumbing, drainage and water",
+"BS 6465-1, -2, -3 sanitary installations",
+"Toilet counts for every building type",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Plumbing, drainage and water",
+"EN 806 water supply and EN 12056 gravity drainage",
+"Pipe sizing",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Plumbing, drainage and water",
+"EN 752 drains outside buildings",
+"Site drainage",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Plumbing, drainage and water",
+"EN 12566 small wastewater treatment / BS 6297",
+"Septic tanks and drainage fields",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Plumbing, drainage and water",
+"BS 8515 rainwater harvesting and BS 8525 greywater",
+"Harvesting and reuse (NBC asks for both)",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Plumbing, drainage and water",
+"BS 6891 gas and BS 5482 LPG / UNBS LPG installation",
+"Gas (empty in the Uganda codes)",
+"By building type",
+"Paid",
+"BSI, UNBS",
+false
+],
+[
+"Environment and sustainability",
+"National Environment Act 2019",
+"ESIA triggers",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Environment and sustainability",
+"Wetlands, River Banks and Lake Shores Regulations",
+"Buffer distances",
+"Core",
+"Free",
+"ulii.org, nema.go.ug",
+true
+],
+[
+"Environment and sustainability",
+"Environmental and Social Assessment Regulations 2020",
+"ESIA process and fees",
+"Core",
+"Free",
+"nema.go.ug",
+true
+],
+[
+"Environment and sustainability",
+"Noise Standards and Control Regulations",
+"Noise limits",
+"Core",
+"Free",
+"nema.go.ug",
+true
+],
+[
+"Environment and sustainability",
+"Waste Management Regulations 2020",
+"Waste storage and construction waste",
+"Core",
+"Free",
+"nema.go.ug",
+true
+],
+[
+"Environment and sustainability",
+"Uganda energy efficiency law and appliance standards (latest)",
+"Energy rules for buildings",
+"Core",
+"Free",
+"ulii.org, MEMD",
+true
+],
+[
+"Environment and sustainability",
+"EDGE user guide",
+"The green rating used in East Africa",
+"Core",
+"Free",
+"edgebuildings.com",
+false
+],
+[
+"Environment and sustainability",
+"LEED v4 BD+C",
+"Green rating (international clients)",
+"Reference",
+"Free",
+"usgbc.org",
+true
+],
+[
+"Environment and sustainability",
+"BREEAM In-Use International",
+"Green rating for existing buildings",
+"Reference",
+"Free",
+"bregroup.com",
+true
+],
+[
+"Environment and sustainability",
+"WELL Building Standard",
+"Health and wellbeing rating",
+"Reference",
+"Free",
+"wellcertified.com",
+false
+],
+[
+"Environment and sustainability",
+"ISO 7730 thermal comfort",
+"Comfort in hot climates",
+"Reference",
+"Paid",
+"ISO",
+false
+],
+[
+"Acoustics",
+"BS 8233 sound insulation and noise in buildings",
+"Room noise levels",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Acoustics",
+"ISO 717 and ISO 3382",
+"Rating walls and floors; room acoustics",
+"Reference",
+"Paid",
+"ISO",
+false
+],
+[
+"Building types",
+"MoH health facility infrastructure guidelines and standard plans",
+"Clinics, health centres, hospitals",
+"By building type",
+"Free",
+"health.go.ug",
+true
+],
+[
+"Building types",
+"UK HTMs and HBNs (health)",
+"Detailed hospital design",
+"By building type",
+"Free",
+"gov.uk",
+false
+],
+[
+"Building types",
+"MoES Basic Requirements and Minimum Standards for education institutions",
+"Schools: classrooms, ratios, facilities",
+"By building type",
+"Free",
+"education.go.ug",
+true
+],
+[
+"Building types",
+"UK Building Bulletins (BB93 acoustics, BB103 areas)",
+"School design detail",
+"By building type",
+"Free",
+"gov.uk",
+false
+],
+[
+"Building types",
+"EAC criteria for classification of hotels and restaurants / UTB standards",
+"Hotels and lodges",
+"By building type",
+"Free",
+"UTB, EAC",
+true
+],
+[
+"Building types",
+"Sport England design guidance",
+"Sports halls and pitches",
+"By building type",
+"Free",
+"sportengland.org",
+false
+],
+[
+"BIM and documentation",
+"ISO 19650-1, -2, -3, -5",
+"Information management, naming, security",
+"Core",
+"Paid",
+"ISO, BSI (UK versions free)",
+false
+],
+[
+"BIM and documentation",
+"Uniclass 2015 tables",
+"Classification codes for elements, spaces, products",
+"Core",
+"Free",
+"thenbs.com",
+false
+],
+[
+"BIM and documentation",
+"ISO 13567-1, -2 CAD layers",
+"Layer naming",
+"Core",
+"Paid",
+"ISO",
+true
+],
+[
+"BIM and documentation",
+"ISO 13567-3 (full)",
+"Layer examples (we have a preview)",
+"Reference",
+"Paid",
+"ISO",
+false
+],
+[
+"BIM and documentation",
+"ISO 128 / ISO 7519 technical drawings",
+"Drawing conventions",
+"Core",
+"Paid",
+"ISO",
+false
+],
+[
+"BIM and documentation",
+"ISO 16739 IFC and buildingSMART IDS",
+"Model exchange and checking",
+"Reference",
+"Free",
+"buildingsmart.org",
+false
+],
+[
+"BIM and documentation",
+"BS 8541 BIM objects",
+"Family (object) standards",
+"Reference",
+"Paid",
+"BSI",
+false
+],
+[
+"Specification and construction",
+"MoWT Standard Specifications for Building Works 2013",
+"Specification template",
+"Core",
+"Free",
+"works.go.ug",
+true
+],
+[
+"Specification and construction",
+"BS 8000 workmanship series",
+"Workmanship on site by trade",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Specification and construction",
+"BS 5534 slating and tiling, BS 6229 flat roofs, BS 8217 felt roofs",
+"Roof specification",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Specification and construction",
+"BS 8102 waterproofing below ground",
+"Basements and ground slabs",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Specification and construction",
+"BS 5385 tiling, BS 8204 screeds, BS EN 13914 render and plaster",
+"Finishes",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Specification and construction",
+"BS 8417 timber preservation",
+"Termite and rot treatment",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Specification and construction",
+"Concrete Society TR34 ground floors",
+"Ground slabs",
+"By building type",
+"Paid",
+"concrete.org.uk",
+false
+],
+[
+"Cost, measurement and contracts",
+"RICS NRM1, NRM2, NRM3",
+"Estimating, BOQ measurement, maintenance costs",
+"Core",
+"Paid",
+"rics.org",
+false
+],
+[
+"Cost, measurement and contracts",
+"A recent priced Ugandan BOQ and supplier price lists",
+"Unit rates in UGX",
+"Core",
+"Free",
+"Your projects",
+false
+],
+[
+"Cost, measurement and contracts",
+"AECOM Africa property and construction cost guide",
+"Cost per m2 benchmarks for Kampala",
+"Core",
+"Free",
+"aecom.com",
+false
+],
+[
+"Cost, measurement and contracts",
+"FIDIC Red, Yellow and White Books",
+"Construction and consultancy contracts",
+"Core",
+"Paid",
+"fidic.org",
+false
+],
+[
+"Cost, measurement and contracts",
+"Uganda PPDA Regulations (current) and threshold schedule in UGX",
+"Public procurement methods and thresholds (the 2024 file in the folder is South Sudan's)",
+"Core",
+"Free",
+"ppda.go.ug",
+true
+],
+[
+"Site safety",
+"Occupational Safety and Health Act 2006",
+"Workplace and site duties",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Site safety",
+"Factories (Building Operations) Rules",
+"Scaffolds, excavations, edges",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Site safety",
+"ISO 45001 and UK CDM 2015 guidance",
+"Designer's safety duties (reference)",
+"Reference",
+"Paid",
+"ISO; gov.uk free",
+false
+],
+[
+"Practice and business",
+"Architects Registration Act and the Board's scale of fees",
+"Professional fees and duties",
+"Core",
+"Free",
+"ulii.org, ARB Uganda",
+true
+],
+[
+"Practice and business",
+"Engineers Registration Act and Surveyors Registration Act",
+"Who may sign what",
+"Core",
+"Free",
+"ulii.org",
+true
+],
+[
+"Practice and business",
+"Taxation Handbook 2025/26 and Tax Amendments 2026/27",
+"Current VAT, WHT, PAYE",
+"Core",
+"Free",
+"ura.go.ug",
+true
+],
+[
+"Practice and business",
+"NSSF Act 2022 and Local Service Tax",
+"Payroll duties",
+"Core",
+"Free",
+"ulii.org, nssfug.org",
+true
+],
+[
+"Practice and business",
+"Companies, Employment, Workers' Compensation Acts",
+"Running the firm",
+"Reference",
+"Free",
+"ulii.org",
+true
+],
+[
+"East Africa regional",
+"EAC harmonised standards catalogue (EAS): cement, steel, blocks, sheets, pipes, cables",
+"Product standards valid in all EAC states",
+"Core",
+"Paid",
+"eac-quality.net, national bureaus",
+false
+],
+[
+"East Africa regional",
+"GEM global seismic hazard model / East African Rift hazard maps",
+"Seismic zoning where national codes are thin",
+"Core",
+"Free",
+"globalquakemodel.org",
+false
+],
+[
+"East Africa regional",
+"National climate and rainfall intensity data (each country)",
+"Wind, rainfall and temperature design data",
+"Core",
+"Free",
+"UNMA, KMD, TMA, Meteo Rwanda",
+false
+],
+[
+"East Africa regional",
+"EAC Common External Tariff (latest)",
+"Import duty on materials and equipment",
+"Reference",
+"Free",
+"eac.int",
+false
+],
+[
+"Kenya",
+"Building Code 2024 (Physical and Land Use Planning Act)",
+"Kenya's statutory building code",
+"Core",
+"Free",
+"kenyalaw.org",
+false
+],
+[
+"Kenya",
+"Physical and Land Use Planning Act 2019 and its regulations",
+"Development permission",
+"Core",
+"Free",
+"kenyalaw.org",
+false
+],
+[
+"Kenya",
+"National Construction Authority Act 2011 and NCA Regulations",
+"Contractor registration, levies, compliance",
+"Core",
+"Free",
+"kenyalaw.org, nca.go.ke",
+false
+],
+[
+"Kenya",
+"Environmental Management and Coordination Act and EIA / Audit Regulations",
+"EIA triggers and process",
+"Core",
+"Free",
+"kenyalaw.org, nema.go.ke",
+false
+],
+[
+"Kenya",
+"Occupational Safety and Health Act 2007 and building-operations rules",
+"Site and workplace safety",
+"Core",
+"Free",
+"kenyalaw.org",
+false
+],
+[
+"Kenya",
+"Persons with Disabilities law (latest) and KS ISO 21542",
+"Accessibility",
+"Core",
+"Free",
+"kenyalaw.org, KEBS",
+false
+],
+[
+"Kenya",
+"Energy (Electrical Installation Work) Regulations and EPRA licensing",
+"Wiring licences",
+"Core",
+"Free",
+"kenyalaw.org, epra.go.ke",
+false
+],
+[
+"Kenya",
+"Water Act 2016 and county water and sewer by-laws",
+"Connections, boreholes",
+"Core",
+"Free",
+"kenyalaw.org",
+false
+],
+[
+"Kenya",
+"KEBS-adopted Eurocodes (KS EN 1990-1998) and national annexes",
+"Structural design basis in Kenya",
+"Core",
+"Paid",
+"KEBS",
+false
+],
+[
+"Kenya",
+"Nairobi City County zoning and development control policy (and each county's plan)",
+"Zoning, plot ratio, heights",
+"Core",
+"Free",
+"nairobi.go.ke",
+false
+],
+[
+"Kenya",
+"Public Procurement and Asset Disposal Act 2015 and Regulations 2020",
+"Public projects",
+"Core",
+"Free",
+"kenyalaw.org, ppra.go.ke",
+false
+],
+[
+"Kenya",
+"Architects and Quantity Surveyors Act (BORAQS) fee scale; Engineers Act 2011",
+"Registration and fees",
+"Core",
+"Free",
+"kenyalaw.org, boraqs.or.ke",
+false
+],
+[
+"Tanzania",
+"Urban Planning Act 2007 and Planning Space Standards Regulations",
+"Plot sizes, coverage, setbacks",
+"Core",
+"Free",
+"tanzlii.org, lands.go.tz",
+false
+],
+[
+"Tanzania",
+"Urban authorities development control and building regulations (latest)",
+"Building permits and rules",
+"Core",
+"Free",
+"tanzlii.org",
+false
+],
+[
+"Tanzania",
+"Environmental Management Act 2004 and EIA and Audit Regulations (as amended)",
+"EIA triggers",
+"Core",
+"Free",
+"tanzlii.org, nemc.or.tz",
+false
+],
+[
+"Tanzania",
+"Fire and Rescue Force Act and fire safety regulations",
+"Fire certificates and inspections",
+"Core",
+"Free",
+"tanzlii.org",
+false
+],
+[
+"Tanzania",
+"Occupational Health and Safety Act 2003",
+"Site and workplace safety",
+"Core",
+"Free",
+"tanzlii.org",
+false
+],
+[
+"Tanzania",
+"Persons with Disabilities Act 2010",
+"Accessibility",
+"Core",
+"Free",
+"tanzlii.org",
+false
+],
+[
+"Tanzania",
+"Contractors, Architects and QS, and Engineers Registration Acts",
+"Registration and practice",
+"Core",
+"Free",
+"tanzlii.org",
+false
+],
+[
+"Tanzania",
+"Public Procurement Act (latest) and Regulations",
+"Public projects",
+"Core",
+"Free",
+"tanzlii.org, ppra.go.tz",
+false
+],
+[
+"Tanzania",
+"TBS standards and adopted structural codes",
+"Products and design basis",
+"Core",
+"Paid",
+"tbs.go.tz",
+false
+],
+[
+"Tanzania",
+"Dar es Salaam, Dodoma and Arusha master plans and zoning",
+"Zoning and heights",
+"Core",
+"Free",
+"City councils",
+false
+],
+[
+"Rwanda",
+"Rwanda Building Code (latest revision)",
+"Rwanda's statutory building code",
+"Core",
+"Free",
+"rha.gov.rw",
+false
+],
+[
+"Rwanda",
+"Urban planning code and building permit ministerial orders",
+"Permits and planning rules",
+"Core",
+"Free",
+"rha.gov.rw",
+false
+],
+[
+"Rwanda",
+"Kigali Master Plan 2050 and Kigali zoning regulations",
+"Detailed zoning, heights, setbacks",
+"Core",
+"Free",
+"bpmis.gov.rw, kigalicity.gov.rw",
+false
+],
+[
+"Rwanda",
+"Rwanda Green Building Minimum Compliance System",
+"Mandatory green requirements",
+"Core",
+"Free",
+"rha.gov.rw",
+false
+],
+[
+"Rwanda",
+"Environment law 2018 and EIA regulations",
+"EIA triggers",
+"Core",
+"Free",
+"rema.gov.rw",
+false
+],
+[
+"Rwanda",
+"Accessibility standards for persons with disabilities",
+"Accessibility",
+"Core",
+"Free",
+"Official Gazette, RSB",
+false
+],
+[
+"Rwanda",
+"Public procurement law and regulations",
+"Public projects",
+"Core",
+"Free",
+"rppa.gov.rw",
+false
+],
+[
+"Rwanda",
+"RSB standards (Rwanda Standards Board)",
+"Products",
+"Core",
+"Paid",
+"rsb.gov.rw",
+false
+],
+[
+"Burundi",
+"Code de l’urbanisme, de l’habitat et de la construction (latest)",
+"Building and planning rules (French)",
+"Core",
+"Free",
+"Journal officiel, ministry of infrastructure",
+false
+],
+[
+"Burundi",
+"Bujumbura and Gitega master plans",
+"Zoning",
+"Core",
+"Free",
+"City authorities",
+false
+],
+[
+"Burundi",
+"Environment code and EIA decree",
+"EIA",
+"Core",
+"Free",
+"Journal officiel",
+false
+],
+[
+"Burundi",
+"BBN standards (Bureau Burundais de Normalisation)",
+"Products",
+"Reference",
+"Paid",
+"BBN",
+false
+],
+[
+"South Sudan",
+"Land Act 2009 and Local Government Act 2009",
+"Land and approvals",
+"Core",
+"Free",
+"Ministry of Justice",
+false
+],
+[
+"South Sudan",
+"Juba urban planning and building regulations (latest)",
+"Permits and rules",
+"Core",
+"Free",
+"Ministry of Lands, Housing and Urban Development",
+false
+],
+[
+"South Sudan",
+"Public Procurement and Disposal Act 2018 and Regulations 2024",
+"Public projects (USD thresholds)",
+"Core",
+"Free",
+"Ministry of Finance",
+true
+],
+[
+"South Sudan",
+"Environment protection law and EIA guidelines (latest)",
+"EIA",
+"Core",
+"Free",
+"Ministry of Environment",
+false
+],
+[
+"DR Congo",
+"Urbanism and construction law and building permit rules (latest)",
+"Building and planning rules (French)",
+"Core",
+"Free",
+"Journal officiel, leganet.cd",
+false
+],
+[
+"DR Congo",
+"Environment law (Loi 11/009) and EIA rules (ACE)",
+"EIA",
+"Core",
+"Free",
+"leganet.cd",
+false
+],
+[
+"DR Congo",
+"Kinshasa, Goma and Lubumbashi provincial building regulations",
+"Local rules",
+"Core",
+"Free",
+"Provincial governments",
+false
+],
+[
+"DR Congo",
+"OCC standards (Office Congolais de Controle)",
+"Products",
+"Reference",
+"Paid",
+"occ.cd",
+false
+],
+[
+"Somalia",
+"Federal and state urban planning and building regulations (latest)",
+"Permits and rules (Benadir / Mogadishu)",
+"Core",
+"Free",
+"Ministry of Public Works",
+false
+],
+[
+"Somalia",
+"Environment law and EIA regulations (latest)",
+"EIA",
+"Core",
+"Free",
+"Ministry of Environment",
+false
+],
+[
+"Ethiopia (Horn)",
+"Ethiopian Building Proclamation 624/2009 and Building Regulation 243/2011",
+"Permits and building rules",
+"Core",
+"Free",
+"Federal Negarit Gazeta",
+false
+],
+[
+"Ethiopia (Horn)",
+"Ethiopian Building Code Standards (EBCS / ES EN Eurocodes)",
+"Structural and services design, incl. seismic",
+"Core",
+"Paid",
+"Ethiopian Standards Agency",
+false
+],
+[
+"Ethiopia (Horn)",
+"Addis Ababa structure plan and zoning",
+"Zoning and heights",
+"Core",
+"Free",
+"Addis Ababa city administration",
+false
+],
+[
+"North America",
+"International Building Code (IBC)",
+"The core building code adopted across the US",
+"Core",
+"Free",
+"codes.iccsafe.org (free to read)",
+false
+],
+[
+"North America",
+"International Residential Code (IRC)",
+"One- and two-family houses",
+"Core",
+"Free",
+"codes.iccsafe.org",
+false
+],
+[
+"North America",
+"International Fire Code (IFC)",
+"Fire safety in use",
+"Core",
+"Free",
+"codes.iccsafe.org",
+false
+],
+[
+"North America",
+"International Energy Conservation Code (IECC) and ASHRAE 90.1",
+"Energy",
+"Core",
+"Free",
+"codes.iccsafe.org, ashrae.org",
+false
+],
+[
+"North America",
+"International Plumbing, Mechanical and Fuel Gas Codes (IPC, IMC, IFGC)",
+"Plumbing, HVAC, gas",
+"Core",
+"Free",
+"codes.iccsafe.org",
+false
+],
+[
+"North America",
+"International Existing Building Code (IEBC)",
+"Alterations and change of use",
+"By building type",
+"Free",
+"codes.iccsafe.org",
+false
+],
+[
+"North America",
+"ICC A117.1 and the 2010 ADA Standards for Accessible Design",
+"Accessibility",
+"Core",
+"Free",
+"ada.gov (free), ICC",
+false
+],
+[
+"North America",
+"NFPA 70 National Electrical Code",
+"Electrical",
+"Core",
+"Free",
+"nfpa.org (free to read)",
+false
+],
+[
+"North America",
+"NFPA 101, 13 and 72",
+"Life safety, sprinklers, fire alarms",
+"Core",
+"Free",
+"nfpa.org (free to read)",
+false
+],
+[
+"North America",
+"ASCE 7 minimum design loads (incl. seismic and wind)",
+"Loads",
+"Core",
+"Paid",
+"asce.org",
+false
+],
+[
+"North America",
+"ACI 318 concrete, AISC 360 and 341 steel, NDS timber, TMS 402/602 masonry",
+"Structural design",
+"Core",
+"Paid",
+"concrete.org, aisc.org (360 free), awc.org (NDS free to read), masonrysociety.org",
+false
+],
+[
+"North America",
+"ASHRAE 62.1, 62.2 and 55",
+"Ventilation and comfort",
+"Core",
+"Free",
+"ashrae.org (free to read)",
+false
+],
+[
+"North America",
+"IESNA Lighting Handbook / ANSI-IES RP standards",
+"Lighting levels",
+"Core",
+"Paid",
+"ies.org",
+false
+],
+[
+"North America",
+"US National CAD Standard, OmniClass, MasterFormat and UniFormat",
+"Drawings, classification, specification structure",
+"Core",
+"Paid",
+"nibs.org, csiresource.org (OmniClass free)",
+false
+],
+[
+"North America",
+"AIA contract documents (B101, A201) and AIA Best Practices",
+"Contracts and practice",
+"Core",
+"Paid",
+"aiacontracts.com",
+false
+],
+[
+"North America",
+"National Building Code of Canada 2020 (with NECB, NFC, NPC)",
+"Canada's model building, energy, fire and plumbing codes",
+"Core",
+"Free",
+"nrc.canada.ca (free)",
+false
+],
+[
+"North America",
+"CSA A23.3 concrete, S16 steel, O86 timber, B651 accessibility, C22.1 electrical",
+"Canadian design standards",
+"Core",
+"Paid",
+"csagroup.org",
+false
+],
+[
+"North America",
+"Mexico City Reglamento de Construcciones and Normas Tecnicas Complementarias; NOM standards",
+"Mexico",
+"Core",
+"Free",
+"CDMX gazette, dof.gob.mx",
+false
+],
+[
+"North America",
+"Local amendments (each state, county and city that adopts the I-codes)",
+"What actually applies on a site",
+"Core",
+"Free",
+"City and county code portals",
+false
+],
+[
+"North America",
+"LEED v4.1 / v5 and ENERGY STAR",
+"Green rating",
+"Reference",
+"Free",
+"usgbc.org",
+false
+],
+[
+"Europe",
+"Eurocodes EN 1990 to EN 1999, all parts, second generation as published",
+"Structural design across Europe",
+"Core",
+"Paid",
+"national standards bodies; law.resource.org (first generation)",
+false
+],
+[
+"Europe",
+"National annexes to the Eurocodes (one per country worked in)",
+"Nationally determined values",
+"Core",
+"Paid",
+"BSI, DIN, AFNOR, NEN, etc.",
+false
+],
+[
+"Europe",
+"Construction Products Regulation (EU) 2024/3110",
+"CE marking, declarations of performance",
+"Core",
+"Free",
+"eur-lex.europa.eu",
+false
+],
+[
+"Europe",
+"Energy Performance of Buildings Directive (EU) 2024/1275",
+"Zero-emission buildings, energy certificates",
+"Core",
+"Free",
+"eur-lex.europa.eu",
+false
+],
+[
+"Europe",
+"EN ISO 52000 series and EN 16798-1",
+"Energy calculation, indoor climate and ventilation",
+"Core",
+"Paid",
+"CEN, ISO",
+false
+],
+[
+"Europe",
+"EN 13501-1 and -2 fire classification; EN 54 fire detection; EN 12845 sprinklers",
+"Fire",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Europe",
+"EN 17210 accessibility of the built environment",
+"Accessibility",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Europe",
+"EN 12464-1 lighting and EN 17037 daylight",
+"Lighting and daylight",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Europe",
+"EN 806, EN 12056, EN 752, EN 12566",
+"Water, drainage, small treatment plants",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Europe",
+"EN 81-20, -50, -70 lifts",
+"Lifts",
+"By building type",
+"Paid",
+"CEN",
+false
+],
+[
+"Europe",
+"EN 206, EN 13670, EN 1090-2",
+"Concrete and steel execution",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Europe",
+"Level(s) framework and EU Taxonomy building criteria",
+"Sustainability reporting",
+"Reference",
+"Free",
+"environment.ec.europa.eu",
+false
+],
+[
+"Europe",
+"UK Building Regulations Approved Documents A to T",
+"UK statutory guidance, free and widely used as a reference",
+"Core",
+"Free",
+"gov.uk",
+false
+],
+[
+"Europe",
+"Germany: Musterbauordnung, state codes and DIN; France: Code de la construction, DTU and RE2020",
+"The two largest national systems",
+"By building type",
+"Paid",
+"dibt.de, legifrance.gouv.fr, AFNOR",
+false
+],
+[
+"Europe",
+"Construction Design and Management Regulations 2015 / EU Directive 92/57/EEC",
+"Designer safety duties",
+"Core",
+"Free",
+"legislation.gov.uk, eur-lex",
+false
+],
+[
+"Europe",
+"RIBA Plan of Work and NBS / Uniclass",
+"Stages, specification, classification",
+"Core",
+"Free",
+"architecture.com, thenbs.com",
+false
+],
+[
+"Asia",
+"Base set for Asia: Eurocodes and ISO/IEC standards (Singapore, Malaysia, Hong Kong and others use Eurocodes)",
+"The common ground across many Asian markets",
+"Core",
+"Paid",
+"national standards bodies",
+false
+],
+[
+"Asia",
+"Singapore: Building Control Act, BCA Approved Document, SCDF Fire Code, Code on Accessibility, Green Mark",
+"Singapore",
+"Core",
+"Free",
+"bca.gov.sg, scdf.gov.sg",
+false
+],
+[
+"Asia",
+"Malaysia: Uniform Building By-Laws, MS 1184 accessibility, MS 1525 energy, Bomba fire requirements",
+"Malaysia",
+"Core",
+"Paid",
+"jkt.kpkt.gov.my, Department of Standards Malaysia",
+false
+],
+[
+"Asia",
+"Hong Kong: Buildings Ordinance and Codes of Practice (fire, structural use of concrete, barrier-free access)",
+"Hong Kong",
+"Core",
+"Free",
+"bd.gov.hk",
+false
+],
+[
+"Asia",
+"India: National Building Code of India 2016, IS 456, IS 875, IS 1893, IS 13920, IS 800",
+"India",
+"Core",
+"Paid",
+"bis.gov.in",
+false
+],
+[
+"Asia",
+"China: GB 50352, GB 50009, GB 50010, GB 50011, GB 50016, GB 50763",
+"China: general design, loads, concrete, seismic, fire, accessibility",
+"Core",
+"Paid",
+"openstd.samr.gov.cn",
+false
+],
+[
+"Asia",
+"Japan: Building Standard Law and Fire Service Act; AIJ design standards",
+"Japan",
+"By building type",
+"Paid",
+"MLIT, AIJ",
+false
+],
+[
+"Asia",
+"Philippines: National Building Code (PD 1096) and NSCP 2015",
+"Philippines (ICC/ACI-based)",
+"By building type",
+"Paid",
+"dpwh.gov.ph, ASEP",
+false
+],
+[
+"Asia",
+"Gulf: Dubai Building Code, Abu Dhabi International Building Code, Saudi Building Code, Qatar Construction Specifications",
+"UAE, Saudi Arabia, Qatar (largely ICC-based)",
+"Core",
+"Free",
+"dm.gov.ae, dmt.gov.ae, sbc.gov.sa, ashghal.gov.qa",
+false
+],
+[
+"Asia",
+"Gulf civil defence fire codes (UAE Fire and Life Safety Code, Saudi SBC 801)",
+"Fire in the Gulf",
+"Core",
+"Free",
+"dcd.gov.ae, sbc.gov.sa",
+false
+],
+[
+"Asia",
+"Green ratings: Estidama Pearl, Green Mark, GRIHA / IGBC, China Three Star",
+"Regional green ratings",
+"Reference",
+"Free",
+"Each scheme's site",
+false
+],
+[
+"Products: doors and windows",
+"EN 14351-1 windows and external doors; EN 14351-2 internal doors",
+"The product standards: performance classes a door or window family must declare",
+"Core",
+"Paid",
+"CEN / BSI",
+false
+],
+[
+"Products: doors and windows",
+"EN 12207, EN 12208, EN 12210 (air, water, wind classes) and EN 1026/1027/12211 tests",
+"Weather performance of windows and doors",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: doors and windows",
+"EN 1634-1 and EN 16034 fire and smoke doors; BS 476-22; BS 8214 timber fire doors",
+"Fire doors (FD30, FD60...)",
+"Core",
+"Paid",
+"CEN / BSI",
+false
+],
+[
+"Products: doors and windows",
+"EN 1627 burglar resistance (RC classes)",
+"Security doors and windows",
+"By building type",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: doors and windows",
+"EN 12400 durability, EN 1191 operating forces, EN 13049 impact",
+"Door and window durability",
+"Reference",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: doors and windows",
+"North America: AAMA/WDMA/CSA 101/I.S.2/A440 (NAFS), ANSI A250.8 steel doors, NFPA 80 fire doors, ASTM E283/E330/E331",
+"The US/Canada equivalents",
+"Core",
+"Paid",
+"AAMA, ANSI, NFPA (free to read), ASTM",
+false
+],
+[
+"Products: doors and windows",
+"UNBS / EAS standards for timber, steel and aluminium doors and windows (where published)",
+"Local product rules",
+"Core",
+"Paid",
+"UNBS catalogue",
+false
+],
+[
+"Products: glass and glazing",
+"EN 572 float glass, EN 12150 toughened, EN 14449 laminated, EN 1279 insulating units",
+"Glass types and marking",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: glass and glazing",
+"EN 673 U-value and EN 410 light and solar values",
+"Glass performance figures for families and energy",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: glass and glazing",
+"BS 6262 glazing for buildings and EN 12600 impact classes",
+"Where safety glass is needed, glass sizing",
+"Core",
+"Paid",
+"BSI / CEN",
+false
+],
+[
+"Products: glass and glazing",
+"ASTM E1300 glass thickness and ASTM C1036/C1048",
+"North American glass",
+"Reference",
+"Paid",
+"ASTM",
+false
+],
+[
+"Products: door and window hardware",
+"EN 1906 lever handles, EN 1935 hinges, EN 12209 locks, EN 1154 closers, EN 179 / EN 1125 panic hardware",
+"Door hardware classes",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: door and window hardware",
+"ANSI/BHMA A156 series",
+"North American hardware grades",
+"Reference",
+"Paid",
+"buildershardware.com",
+false
+],
+[
+"Products: materials",
+"EN 197-1 / EAS 18-1 cement and EN 12620 aggregates",
+"Cement and aggregates",
+"Core",
+"Paid",
+"CEN, UNBS",
+false
+],
+[
+"Products: materials",
+"EN 771-1 clay bricks, EN 771-3 concrete blocks, EN 771-6 natural stone; EN 998-2 mortar",
+"Masonry units and mortar (Ogala's stone walls)",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: materials",
+"BS 4449 / EAS 412 reinforcing steel; EN 10025 structural steel; EN 10346 coated sheet",
+"Steel and roofing sheet",
+"Core",
+"Paid",
+"BSI, CEN, UNBS",
+false
+],
+[
+"Products: materials",
+"EN 338 timber strength classes, EN 14081 grading, EN 636 plywood, EN 13986 panels",
+"Timber and boards",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: materials",
+"EN 508 metal roofing, EN 1304 clay tiles, EN 490 concrete tiles",
+"Roof coverings",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: materials",
+"EN 14411 ceramic tiles, EN 13813 screeds, EN 13300 paints, ISO 12944 corrosion protection",
+"Finishes",
+"Core",
+"Paid",
+"CEN, ISO",
+false
+],
+[
+"Products: materials",
+"EN 520 gypsum board, EN 13162-13171 insulation, EN 13707 / EN 13956 waterproofing membranes",
+"Boards, insulation, waterproofing",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: materials",
+"EN 1401 / ISO 1452 PVC pipes, ISO 4427 HDPE, EN 997 WCs, EN 14688 basins",
+"Plumbing products and sanitaryware",
+"Core",
+"Paid",
+"CEN, ISO",
+false
+],
+[
+"Products: materials",
+"IEC 60227 / BS 6004 cables, IEC 60898 breakers, IEC 60669 switches",
+"Electrical products",
+"Core",
+"Paid",
+"IEC, BSI",
+false
+],
+[
+"Products: materials",
+"EN 13501-1 reaction to fire classes",
+"The fire class every material declares",
+"Core",
+"Paid",
+"CEN",
+false
+],
+[
+"Products: materials",
+"ASTM C150, C90, A615, A36, E84 (North American materials)",
+"US equivalents",
+"Reference",
+"Paid",
+"ASTM",
+false
+],
+[
+"Products: data for families",
+"EN ISO 23386 and EN ISO 23387 product data templates",
+"How a manufacturer's product data maps into a family",
+"Core",
+"Paid",
+"ISO / CEN",
+false
+],
+[
+"Products: data for families",
+"EN 15804 Environmental Product Declarations",
+"Embodied carbon per material, for the material database",
+"Core",
+"Free",
+"EPD registries (environdec.com, free)",
+false
+],
+[
+"Products: data for families",
+"Declarations of Performance under the Construction Products Regulation",
+"Each EU product's declared performance",
+"Core",
+"Free",
+"Manufacturers' sites",
+false
+],
+[
+"Products: data for families",
+"IFC property sets (buildingSMART) and Uniclass Pr product codes",
+"Standard parameter names for families",
+"Core",
+"Free",
+"buildingsmart.org, thenbs.com",
+false
+],
+[
+"Products: data for families",
+"Manufacturers' catalogues and BIM objects (NBS Source, BIMobject, manufacturers' sites)",
+"Real products for Formcraft families",
+"Core",
+"Free",
+"source.thenbs.com, bimobject.com, manufacturers",
+false
+],
+[
+"VDC and BIM management",
+"ISO 19650-4 information exchange and ISO 19650-6 health and safety information",
+"How information is exchanged and checked; hazards carried in the model",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"VDC and BIM management",
+"ISO 19650-2 revision watch (replacement edition in development)",
+"Pin the edition named in each contract; do not hard-code an old one",
+"Reference",
+"Paid",
+"ISO, BSI, UK BIM Framework",
+false
+],
+[
+"VDC and BIM management",
+"ISO 7817-1 level of information need (confirm 2024 edition)",
+"Replaces vague LOD 300 wording with what each stage needs",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"VDC and BIM management",
+"BIMForum LOD Specification (confirm 2025 edition)",
+"Reliability and content of model elements by stage",
+"Core",
+"Free",
+"bimforum.org",
+false
+],
+[
+"VDC and BIM management",
+"NBIMS-US V4: project BIM requirements, BIM execution planning, BIM use definitions, COBie V3",
+"BEP structure, BIM uses and handover data",
+"Core",
+"Free",
+"nibs.org, nationalbimstandard.org",
+false
+],
+[
+"VDC and BIM management",
+"NIBS BIM Execution Plan template (Excel) and Model Element Table templates",
+"Ready BEP and element tables to adapt",
+"Reference",
+"Free",
+"nibs.org",
+false
+],
+[
+"VDC and BIM management",
+"UK BIM Framework guidance and templates (EIR, OIR, AIR, PIR, BEP, MIDP, TIDP)",
+"Free ISO 19650 templates and plain-language guidance",
+"Core",
+"Free",
+"ukbimframework.org",
+false
+],
+[
+"VDC and BIM management",
+"ISO 29481-1 and -2 information delivery manual (confirm 2025 edition of -1)",
+"Process maps and exchange requirements",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"VDC and BIM management",
+"ISO/TS 12911 BIM implementation framework (confirm current status)",
+"How to specify BIM requirements",
+"Reference",
+"Paid",
+"ISO",
+false
+],
+[
+"VDC and BIM management",
+"IFC 4.3 documentation and Model View Definitions (Reference View, Design Transfer View)",
+"Export and import settings, what each view contains",
+"Core",
+"Free",
+"buildingsmart.org, technical.buildingsmart.org",
+false
+],
+[
+"VDC and BIM management",
+"buildingSMART IDS (Information Delivery Specification)",
+"Machine-checkable information requirements for IFC models",
+"Core",
+"Free",
+"buildingsmart.org",
+false
+],
+[
+"VDC and BIM management",
+"buildingSMART BCF (BIM Collaboration Format) and openCDE APIs",
+"Issue exchange between Navisworks, Revit and other tools",
+"Core",
+"Free",
+"buildingsmart.org",
+false
+],
+[
+"VDC and BIM management",
+"UNBS list of ISO, IEC and EN standards adopted as Uganda Standards",
+"Which BIM, CAD and testing standards have Ugandan status",
+"Core",
+"Free",
+"UNBS catalogue and committee office",
+false
+],
+[
+"BIM data and classification",
+"ISO 12006-2 classification framework",
+"Structure of classification tables",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"BIM data and classification",
+"ISO 12006-3 object-oriented information framework",
+"Data dictionary structure behind classification",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"BIM data and classification",
+"ISO 23386 properties in data dictionaries",
+"How to define and maintain properties (the FMC parameter dictionary)",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"BIM data and classification",
+"ISO 23387 data templates for objects (confirm 2025 edition)",
+"Property templates for doors, windows, equipment",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"BIM data and classification",
+"buildingSMART Data Dictionary (bSDD)",
+"Shared names and properties to map our dictionary to",
+"Reference",
+"Free",
+"search.bsdd.buildingsmart.org",
+false
+],
+[
+"BIM data and classification",
+"Classification crosswalks: Uniclass, OmniClass, MasterFormat, UniFormat (where published)",
+"Mapping one code system to another for cost and specification links",
+"Reference",
+"Free",
+"thenbs.com, csiresource.org",
+false
+],
+[
+"BIM data and classification",
+"ISO 4157-1, -2 and -3 designation of buildings, rooms and spaces",
+"Room names and numbers",
+"Reference",
+"Paid",
+"ISO",
+false
+],
+[
+"CAD and drawing production",
+"ISO 129-1 dimensioning",
+"How dimensions are presented",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"CAD and drawing production",
+"ISO 5457 drawing sheet sizes and layout",
+"Sheet formats and margins",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"CAD and drawing production",
+"ISO 5455 scales",
+"Preferred drawing scales",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"CAD and drawing production",
+"ISO 3098 technical lettering",
+"Text style and height",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"CAD and drawing production",
+"ISO 7200 data fields in title blocks and document headers",
+"Title block fields (ISO 19650 naming)",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"CAD and drawing production",
+"ISO 9431 spaces for drawing, text and title blocks (confirm current status)",
+"Older sheet layout rules",
+"Reference",
+"Paid",
+"ISO",
+false
+],
+[
+"CAD and drawing production",
+"ISO 3766 simplified representation of concrete reinforcement",
+"Reinforcement drawings",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"CAD and drawing production",
+"ISO 7518 simplified representation of demolition and rebuilding (confirm current status)",
+"Demolition and alteration drawings",
+"Reference",
+"Paid",
+"ISO",
+false
+],
+[
+"CAD and drawing production",
+"US National CAD Standard V7 (confirm V7 date): AIA CAD Layer Guidelines, Uniform Drawing System, BIM implementation, plotting",
+"A mature layer, drawing and plotting system to adapt (also listed under North America)",
+"Core",
+"Paid",
+"nibs.org",
+false
+],
+[
+"CAD and drawing production",
+"USACE A/E/C CAD Standard, Graphics Standard and Symbols Guide",
+"Free worked examples of layers, graphics and symbols",
+"Reference",
+"Free",
+"USACE CAD/BIM Technology Center",
+false
+],
+[
+"CAD and drawing production",
+"Project coordinate and datum references for Uganda (WGS 84 and Arc 1960, UTM zones 35 and 36)",
+"Shared coordinates, survey point, project base point",
+"Core",
+"Free",
+"epsg.org, Department of Surveys and Mapping",
+false
+],
+[
+"Revit, Robot and Navisworks",
+"Autodesk Revit help: worksharing, links, shared coordinates, DWG, IFC and NWC export settings",
+"Export and coordination settings to write into the manual",
+"Core",
+"Free",
+"help.autodesk.com",
+false
+],
+[
+"Revit, Robot and Navisworks",
+"Autodesk Revit and Robot Structural Analysis integration help (transfer, update, SMXX, analytical model preparation)",
+"The Revit to Robot to Revit exchange protocol",
+"Core",
+"Free",
+"help.autodesk.com",
+false
+],
+[
+"Revit, Robot and Navisworks",
+"Autodesk Robot Structural Analysis Professional help (loads, combinations, design codes, results)",
+"Analytical conventions and design code settings",
+"Core",
+"Free",
+"help.autodesk.com",
+false
+],
+[
+"Revit, Robot and Navisworks",
+"Autodesk Navisworks Manage help (NWC, NWF, NWD, Clash Detective, TimeLiner, publish, refresh)",
+"Federation, clash and 4D procedures",
+"Core",
+"Free",
+"help.autodesk.com",
+false
+],
+[
+"Revit, Robot and Navisworks",
+"Autodesk product version compatibility chart",
+"Software compatibility matrix (Revit, Robot, Navisworks versions)",
+"Reference",
+"Free",
+"autodesk.com",
+false
+],
+[
+"Revit, Robot and Navisworks",
+"Revit API, Robot Structural Analysis API and Navisworks API developer documentation",
+"Reference for the Formcraft plugin and automation",
+"Reference",
+"Free",
+"help.autodesk.com, Autodesk Platform Services",
+false
+],
+[
+"Quality, risk and management systems",
+"ISO 9001 quality management systems",
+"Quality system backbone",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Quality, risk and management systems",
+"ISO 10005 quality plans",
+"Project quality plan structure",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Quality, risk and management systems",
+"ISO 19011 auditing management systems (confirm 2026 edition)",
+"Internal audit of the BIM and QA system",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Quality, risk and management systems",
+"ISO 14001 environmental management systems",
+"Site environmental plans and inspections",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Quality, risk and management systems",
+"ISO 31000 risk management",
+"Risk register method linked to model locations",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Quality, risk and management systems",
+"ISO 21502 project management guidance",
+"Programme and WBS structure for 4D",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Quality, risk and management systems",
+"ISO/IEC 17025 competence of testing laboratories",
+"What an acceptable test lab must show",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"UNBS-adopted test methods for cement, aggregates, concrete, blocks and steel",
+"Which EN or ASTM method is the Ugandan equivalent",
+"Core",
+"Paid",
+"UNBS catalogue",
+false
+],
+[
+"Construction testing and tolerances",
+"BS EN 12350 testing fresh concrete",
+"Slump, density, air content",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"BS EN 12390 testing hardened concrete",
+"Cube and cylinder strength, curing",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"BS EN 12504 testing concrete in structures",
+"Cores, rebound hammer, pulse velocity",
+"Reference",
+"Paid",
+"BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"ASTM C31, C39 and C143 (alternative to the EN concrete tests)",
+"Cylinders, compressive strength, slump for US-led clients",
+"Reference",
+"Paid",
+"astm.org",
+false
+],
+[
+"Construction testing and tolerances",
+"BS 1377 soils for civil engineering purposes",
+"Classification, compaction, CBR, moisture",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"ASTM D698 and D1557 compaction (Proctor)",
+"Compaction tests for earthworks",
+"Reference",
+"Paid",
+"astm.org",
+false
+],
+[
+"Construction testing and tolerances",
+"BS 4449 and EN 10080 reinforcing steel",
+"Rebar grades, tensile and bend tests",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"BS EN 771 masonry units and BS EN 772 test methods; BS EN 1015 mortar tests",
+"Block, brick and mortar acceptance",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"BS EN 1610 construction and testing of drains and sewers",
+"Water and air tests for drainage",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"IEC 60364 low-voltage installations incl. Part 6 verification",
+"Electrical inspection and test records",
+"Core",
+"Paid",
+"IEC webstore, BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"SMACNA HVAC Duct Construction Standards and HVAC Air Duct Leakage Test Manual",
+"Duct construction and leakage testing",
+"Core",
+"Paid",
+"smacna.org",
+false
+],
+[
+"Construction testing and tolerances",
+"EN 13501-1 and -2 fire classification and EN 1634-1 fire door testing",
+"Fire ratings of products and doors",
+"Core",
+"Paid",
+"BSI",
+false
+],
+[
+"Construction testing and tolerances",
+"ISO 3443 tolerances for building, ISO 4463-1 setting out and measurement, BS 5606 accuracy in building",
+"Permitted deviations and survey checks",
+"Core",
+"Paid",
+"ISO, BSI",
+false
+],
+[
+"Commissioning and handover",
+"CIBSE Commissioning Codes (M management, A air, W water, C controls)",
+"Commissioning procedure for building services",
+"Core",
+"Paid",
+"cibse.org",
+false
+],
+[
+"Commissioning and handover",
+"BSRIA commissioning and testing guides (air, water, controls)",
+"Practical balancing and functional tests",
+"Reference",
+"Paid",
+"bsria.com",
+false
+],
+[
+"Commissioning and handover",
+"ASHRAE Guideline 0 and Standard 202 commissioning process",
+"Commissioning plans and records",
+"Reference",
+"Paid",
+"ashrae.org",
+false
+],
+[
+"Commissioning and handover",
+"Government Soft Landings and BSRIA Soft Landings Framework",
+"Handover, aftercare and post-occupancy",
+"Reference",
+"Free",
+"gov.uk, bsria.com",
+false
+],
+[
+"Commissioning and handover",
+"COBie V3 (NBIMS-US V4): spreadsheet, JSON and IFC schema",
+"Asset register and O and M data at handover",
+"Core",
+"Free",
+"nibs.org",
+false
+],
+[
+"Commissioning and handover",
+"ISO 55000 asset management and ISO 41001 facility management",
+"Owner-side asset and facilities requirements",
+"Reference",
+"Paid",
+"ISO, BSI",
+false
+]
+]
