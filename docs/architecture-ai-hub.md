@@ -152,3 +152,26 @@ Formcraft needs many PCs and phones on the same data. A JSON file or a SQLite fi
 **MCP server**
 - On one PC it still works over a backup file. It now has atomic writes and a lock.
 - For many PCs, the next step is a version that reads and writes Firestore using a service account.
+
+
+## 10. Decision: offline model target is 7–8B (30 October 2026)
+
+**Hardware it is sized for:** the main PC has 16 GB RAM and a 4 GB graphics card.
+
+**Why 7–8B**
+- A 14B model runs on this PC, but only about a third of it fits on the graphics card. That gives roughly 3–8 words a second, and memory is nearly full.
+- A 7–8B model in Q4 form (about 5 GB) runs almost fully on the graphics card, at roughly 15–25 words a second.
+
+| Tier | Online | Offline |
+|---|---|---|
+| Quick | Small cloud model | 3–4B model, fully on the graphics card |
+| Default | Mid cloud model | **7–8B model (Q4_K_M)** |
+| Deep | Large cloud model | 7–8B model. A 14B model only for queued overnight jobs, never live chat |
+
+**Settings**
+- Context window: 4,096–8,192 tokens. Larger windows use memory fast.
+- Keep one model loaded at a time.
+- The hub unloads the local model when Revit starts and reloads it when Revit closes.
+- Offline models are an optional download in the app's settings, so PCs that only use cloud AI stay light.
+
+**Choosing the model:** run `tools/offline-model-test/` on 2–3 current 7–8B models that support tool calling. Pick the one that passes the most Formcraft tasks: valid tool calls, valid JSON, sensible actions. Speed is the tie-breaker. Repeat the test whenever a new model family is released. Because agents ask for a tier, not a model name, switching means changing one setting.

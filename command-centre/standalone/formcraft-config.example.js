@@ -9,6 +9,7 @@ window.FORMCRAFT_CONFIG = {
     provider: 'anthropic',                 // 'anthropic' | 'openai' | 'gemini' | 'mistral' | 'ollama' | 'lmstudio'
     // baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai',  // Gemini; Mistral: 'https://api.mistral.ai/v1'
     models: { quick: 'claude-haiku-5-5', default: 'claude-sonnet-5-5', complex: 'claude-opus-5-5' }
-    // Ollama offline example: provider: 'ollama', models: { quick: 'llama3.2:3b', default: 'qwen2.5:14b', complex: 'qwen2.5:32b' }
+    // Offline (Formcraft target: 16 GB RAM, 4 GB VRAM): provider: 'ollama', models: { quick: '<3-4B model>', default: '<7-8B model>', complex: '<7-8B model>' }
+    // Pick the 7-8B model with tools/offline-model-test (it must pass tool calls reliably). Deep work goes to a cloud model when online.
   }
 };
