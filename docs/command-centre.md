@@ -120,3 +120,23 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
   - **AI: plan the next 12 months** adds Ideas following a set rhythm: 2 long YouTube videos a month, 3 Shorts a week, a weekly LinkedIn post, a monthly newsletter and holiday posters.
   - A one-click button adds all public holidays. The plan downloads as an Excel file.
   - Coverage measures show weeks covered out of 52 and holidays covered.
+
+## Place search, trades, events, product ideas and the tutorial factory (October 2026)
+
+- **Directory search by place.** Search by profession (or "Professionals" or "Trades and crafts") and a district or town. Results show people serving that place first, then those in the same region (from a map of about 60 Ugandan districts and towns to Central, Eastern, Northern and Western), then those who serve nationwide. Trades now include carpenters, furniture makers, masons, steel fixers, welders, aluminium and glass fabricators, electricians, plumbers, tilers, painters, roofers, plasterers, borehole drillers and solar installers. The public data includes each listing's group (professionals or trades) and its regions.
+- **Events to attend** (collection `xevents`).
+  - Each event records type, date, place, link, cost, why to go, who goes, status and results (leads and contacts).
+  - A 12-month strip shows booked months, and months with nothing booked are outlined in amber.
+  - Pasting a listing lets the AI extract the events.
+  - Registering adds the event to the calendar. Marking it attended creates a follow-up task.
+  - **Automations:** DD-14 (weekly event finder) and AL-11 (follow-up).
+- **Product manager role and ideas register.**
+  - AI staff now has 28 roles. The 28th, the product manager, looks for new Revit tools and plugin ideas and proposes how to split Formcraft Tools into smaller subscriptions.
+  - The new register `reg_ideas` records each idea's problem, users, module, how to sell it, price, effort, score, evidence and status.
+  - **Automation SD-10** is the weekly idea scout.
+  - The AI staff page offers to add any planned roles that are missing.
+- **Revit tutorial factory** (Content plan).
+  - The YouTube target defaults to 2,000 subscribers by 31 December 2027 and is shown with the monthly pace needed, read from the latest "subscribers" number logged.
+  - One button adds 52 weeks of tutorials: 3 "Revit in 60 seconds" Shorts a week, drawn from 45 everyday Revit tasks, plus 1 longer tutorial a week. Every third longer video is a Formcraft Tools guide.
+  - **Automation VC-08** records each tutorial by running its steps in Revit through the MCP tools while capturing the screen.
+  - **Automation VC-09** assembles the video: zooms, captions, narration or silent with music, brand intro and outro, a vertical crop for Shorts, and a thumbnail.

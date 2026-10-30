@@ -1,0 +1,14 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1440,height:950}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
+const clk=async s=>{await p.$eval(s,e=>e.click());await p.waitForTimeout(400);};
+await p.goto('file:///tmp/pt/index5.html#xevents');await p.waitForTimeout(3000);
+await p.fill('form[data-f=xevpaste] textarea','Uganda Build Expo 20 Nov');await clk('form[data-f=xevpaste] button');await p.waitForTimeout(600);
+await p.fill('form[data-f=xev] input[name=name]','USA CPD seminar');await p.fill('form[data-f=xev] input[name=date]','2026-12-05');await clk('form[data-f=xev] button');
+console.log('rows',await p.$$eval('[data-xest]',x=>x.length));
+await clk('[data-xeopen]');await p.check('form[data-f=xevedit] input[name=g_Leads]');await clk('form[data-f=xevedit] button');
+await p.selectOption('[data-xest]','Registered');await p.waitForTimeout(500);
+await p.selectOption('[data-xest]','Attended');await p.waitForTimeout(500);
+await p.evaluate(()=>location.hash='calendar');await p.waitForTimeout(300);
+await p.evaluate(()=>location.hash='team');await p.waitForTimeout(300);console.log('follow-up task',await p.evaluate(()=>document.querySelector('#view').innerText.includes('Follow up Uganda Build Expo')));
+await p.evaluate(()=>location.hash='xevents');await p.waitForTimeout(300);await p.screenshot({path:'xev.png'});
+console.log('ERR',JSON.stringify(errs));await b.close();})();
