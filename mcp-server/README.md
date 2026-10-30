@@ -27,7 +27,7 @@ FORMCRAFT_DATA=C:\Formcraft\formcraft-data.json node server.js
 
 ## What it exposes
 
-- **Tools:** get_brief, read_data, query_register, propose_actions, list_pending, apply_approved, remember, recall, log_exchange, handover_pack, log_metric
+- **Tools:** get_brief, read_data, query_register, propose_actions, list_pending, apply_approved, reject_pending, remember, recall, log_exchange, handover_pack, log_metric
 - **Resources:** formcraft://company, formcraft://memory, formcraft://projects, formcraft://handover
 - **Prompts:** agent_general, agent_finance, agent_sales, agent_projects, agent_design, agent_software, agent_people, agent_legal. Each one is built from `rulebooks/agents/<key>.md` plus that agent's long-term memory.
 
@@ -42,3 +42,9 @@ FORMCRAFT_DATA=C:\Formcraft\formcraft-data.json node server.js
 ```
 printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | FORMCRAFT_DATA=test.json node server.js
 ```
+
+## Reliability (October 2026 review)
+
+- **Atomic writes and a lock:** saves go to a temp file, then a rename. A lock file stops two clients writing at once (tested with 20 writers in parallel: no lost writes). This covers several clients on one PC. For several PCs, use the central server described in `docs/architecture-ai-hub.md`.
+- **Checked AI actions:** `propose_actions` accepts only six action types, each with its required fields. Bad actions are returned with the reason and never reach the queue.
+- **Ranked recall:** a memory matches if half or more of the query words match (partial word stems count). Results come best first, with pinned memories ahead on ties.
