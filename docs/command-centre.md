@@ -140,3 +140,4 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
   - One button adds 52 weeks of tutorials: 3 "Revit in 60 seconds" Shorts a week, drawn from 45 everyday Revit tasks, plus 1 longer tutorial a week. Every third longer video is a Formcraft Tools guide.
   - **Automation VC-08** records each tutorial by running its steps in Revit through the MCP tools while capturing the screen.
   - **Automation VC-09** assembles the video: zooms, captions, narration or silent with music, brand intro and outro, a vertical crop for Shorts, and a thumbnail.
+- **Tabs per person** (Access, owner only). The owner can tick exactly which tabs each person sees (`settings.tabs[uid]`). This overrides the role's tabs. "Use the role's tabs" removes the override. Admin-only data stays locked in the database whatever is ticked. In the Windows hub, Emlyn's PC is the main hub and controls the other founders' tabs the same way.
