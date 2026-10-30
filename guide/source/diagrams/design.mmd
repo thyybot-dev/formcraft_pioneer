@@ -1,0 +1,13 @@
+flowchart LR
+  classDef dark fill:#1b2532,stroke:#1b2532,color:#fff
+  classDef teal fill:#7fc7be,stroke:#5fa9a0,color:#1b2532
+  A([Brief and site]):::dark --> B[Sketch in the Design studio<br/>walls, rooms, doors, dimensions]
+  B --> C[Client comments<br/>on the same board]
+  C --> D[Design assistant edits<br/>'move the kitchen wall 300 mm left']:::teal
+  D --> E[Revision sheets<br/>Rev A, B, C with a log]
+  E --> F[Hand-off file<br/>fmc-cis/0.2]
+  F --> G[Revit plugin builds<br/>walls and rooms]:::teal
+  G --> H[BIM model, Gate A check<br/>families from the factory]
+  H --> I[Drawings checked against<br/>the Standards bank]
+  I --> J[Approval guide for<br/>the authority]
+  J --> K([Construction]):::dark

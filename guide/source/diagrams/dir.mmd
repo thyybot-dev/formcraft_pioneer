@@ -1,0 +1,12 @@
+flowchart TB
+  classDef dark fill:#1b2532,stroke:#1b2532,color:#fff
+  classDef teal fill:#7fc7be,stroke:#5fa9a0,color:#1b2532
+  A([An architect adds a professional:<br/>town planner, surveyor, engineer, mason]):::dark --> B[Listed as Private<br/>only Formcraft sees it]
+  B --> C{How is it confirmed?}
+  C -->|Consent call or SMS:<br/>they agree to show their number| D[Confirmed]:::teal
+  C -->|Registration found on the<br/>board's public register| D
+  C -->|No answer yet| B
+  D --> E[Public on the website:<br/>search by place and trade]:::teal
+  E --> F[A client hires them<br/>through a referral link]
+  F --> G[The client rates the work;<br/>the rating shows on the profile]
+  G -.-> E

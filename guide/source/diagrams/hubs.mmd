@@ -1,0 +1,16 @@
+flowchart TB
+  classDef dark fill:#1b2532,stroke:#1b2532,color:#fff
+  classDef teal fill:#7fc7be,stroke:#5fa9a0,color:#1b2532
+  classDef soft fill:#fff,stroke:#c9d3d8,color:#1b2532
+  FB[(Firebase: Firestore, Auth,<br/>Storage, Functions)]:::teal
+  M[Main hub: Emlyn's PC<br/>Revit, offline AI, builds,<br/>scheduled automations]:::dark
+  S1[Founder hub: Peter<br/>monitor, approve, check]:::dark
+  S2[Founder hub: Esther<br/>monitor, approve, check]:::dark
+  W[Employees: web version<br/>phones and PCs, no AI keys]:::soft
+  FN[Firebase Functions<br/>payments, form replies:<br/>run even if every PC is off]:::soft
+  M <-->|sync, heartbeat every 30 s| FB
+  S1 <--> FB
+  S2 <--> FB
+  W <-->|Firestore rules| FB
+  FB --- FN
+  S1 -.->|takes the lease if the main<br/>heartbeat is 5 minutes old| M

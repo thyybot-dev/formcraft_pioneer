@@ -1,0 +1,26 @@
+flowchart TD
+  classDef dark fill:#1b2532,stroke:#1b2532,color:#fff
+  classDef teal fill:#7fc7be,stroke:#5fa9a0,color:#1b2532
+  classDef warn fill:#fdecd2,stroke:#b7791f,color:#1b2532
+  T([Trigger: a schedule, a new email,<br/>a form, a person or an agent]):::dark
+  T --> R[Request declares its purpose<br/>intent, area, risk, budget]
+  R --> CP[Hub returns a context pack<br/>scripts, memory, rulebook, journal]
+  CP --> S{Is there a tested<br/>script for this intent?}
+  S -->|Yes| RUN[Run the script<br/>level 0, free]:::teal
+  S -->|No| LOW[Try the lowest AI level allowed<br/>offline model first]
+  LOW --> CHK{Does the result<br/>pass its check?}
+  CHK -->|No| UP[Go up one level<br/>log the reason]:::warn
+  UP --> CHK
+  CHK -->|Yes| PROP[Proposal]
+  RUN --> PROP
+  PROP --> RISK{Risk level}
+  RISK -->|Low| AUTO[Applied automatically, logged]:::teal
+  RISK -->|Medium| ONE[One founder approves]:::dark
+  RISK -->|High or over USD 500| TWO[Owner plus a second founder]:::dark
+  ONE --> APPLY[Applied]
+  TWO --> APPLY
+  AUTO --> LOG
+  APPLY --> LOG[Ledger line, journal, memory]
+  LOG --> LEARN{Done by AI 3 times<br/>with similar inputs?}
+  LEARN -->|Yes| PROMO[Developer agent writes a script<br/>plus tests; Emlyn approves]:::teal
+  PROMO -.->|next time| S

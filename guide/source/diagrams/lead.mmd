@@ -1,0 +1,15 @@
+flowchart LR
+  classDef dark fill:#1b2532,stroke:#1b2532,color:#fff
+  classDef teal fill:#7fc7be,stroke:#5fa9a0,color:#1b2532
+  A([Content, website,<br/>referral, event]):::dark --> B[Enquiry lands<br/>Enquiries and auto-quotes]
+  B --> C[Auto-reply in 5 minutes<br/>lead score]:::teal
+  C --> D[Meeting booked<br/>in the first free slot]
+  D --> E[Quote or proposal<br/>priced from Pricing]
+  E --> F{Won?}
+  F -->|No| G[Loss reason logged<br/>reactivation in 90 days]
+  F -->|Yes| H[Onboarding journey<br/>contract, deposit invoice]:::teal
+  H --> I[Project runs<br/>playbook, site diary]
+  I --> J[Milestone billing<br/>receipts, ledger]
+  J --> K[Handover and offboarding<br/>final invoice, archive]:::teal
+  K --> L[Review and referral<br/>rating in the directory]
+  L -.-> A

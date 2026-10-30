@@ -1,0 +1,43 @@
+flowchart LR
+  classDef dark fill:#1b2532,stroke:#1b2532,color:#fff
+  classDef teal fill:#7fc7be,stroke:#5fa9a0,color:#1b2532
+  classDef soft fill:#fff,stroke:#c9d3d8,color:#1b2532
+  subgraph P[People]
+    F1[Emlyn: main hub<br/>dev, design, BIM]:::dark
+    F2[Peter: founder hub<br/>projects, finance]:::dark
+    F3[Esther: founder hub<br/>sales, marketing]:::dark
+    E1[Employees<br/>web version]:::soft
+    C1[Clients and professionals<br/>website and portal]:::soft
+  end
+  subgraph CC[Formcraft Command Centre]
+    UI[67 pages<br/>briefs, registers, tools]:::teal
+    AP[Approvals queue<br/>risk rules]:::teal
+    MEM[Memory and rulebooks]:::teal
+  end
+  subgraph DATA[Data]
+    FS[(Firebase<br/>online master)]:::soft
+    PG[(PostgreSQL<br/>local copy on each hub)]:::soft
+  end
+  subgraph AI[AI layer: cheapest path]
+    SC[Scripts and tools<br/>free]:::soft
+    OFF[Offline 7-8B model<br/>free]:::soft
+    CL[Cloud: DeepSeek, Claude, Grok<br/>paid, by tier]:::soft
+  end
+  subgraph OUT[Connections through the MCP hub]
+    RV[Revit windows<br/>ports 8080-8089]:::soft
+    WEB[Website]:::soft
+    MSG[Email, WhatsApp,<br/>social, calls]:::soft
+    PAY[Mobile money,<br/>Flutterwave]:::soft
+    GH[GitHub, tests]:::soft
+  end
+  F1 & F2 & F3 --> UI
+  E1 --> UI
+  C1 --> WEB
+  UI <--> FS
+  FS <--> PG
+  UI --> AP
+  AI -->|proposes| AP
+  AP -->|approved| OUT
+  MEM --- AI
+  SC --> OFF --> CL
+  WEB <--> FS
