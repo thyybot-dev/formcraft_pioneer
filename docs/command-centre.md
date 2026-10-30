@@ -81,3 +81,12 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
 - **Standards bank:** new fields `pub`, `webnote` and `buy`. There is a publish button on each standard and a website preview, and the public view shows reference details and Formcraft's own note only.
 - **Website data:** a "Download website data (JSON)" button exports exactly what the public pages may show. The website should read only published copies (automation WS-07 publishes them to public collections), never `pros` directly, because that collection holds private phone numbers.
 - **New automations:** WS-05 (confirmation sender), WS-06 (approval times digest), WS-07 (public data publish).
+
+## Standards bank: search by topic, country first (October 2026)
+
+- **Tabs:** Search by topic, Standards and laws, Add sections, and Website preview.
+- **Search by topic:** a search such as "walls" or "roofs" returns every relevant section across standards and building laws. Synonyms are understood ("roofing" finds roof pitch). Results are grouped with the chosen country first (Uganda by default), then East African standards, then international, then other East African countries. On the website, the country will come from the visitor's location.
+- **Each result** shows the standard or law, its clause and page, Formcraft's own explanation, the key values and the topics, with a link to buy the full standard or to the official source. Law and regulation sections can show their text. Standards never show their wording.
+- **Add sections:** paste text from a PDF you own, and the AI splits it into sections. For standards, the pasted wording is never saved. New sections start hidden until checked.
+- **Collection** `std_clauses`. Its fields are std or source, kind, juris, ref, page, heading, topics, summary, values, text (laws only) and pub.
+- **No PDF files are ever shared.** Each standard records its licence (`licence` field). The website shows only references, page numbers, Formcraft's explanations and buy links.

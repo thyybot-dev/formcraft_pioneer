@@ -321,3 +321,12 @@ When the task ends, the hub writes the journal note, any lesson to memory, and a
 | Escalation rate by intent | Under 10%. Higher marks the next script to write |
 | Serious error rate in reviewed samples | Under 2% |
 | Automation share of all business tasks (runs without a person) | Rising every month. This is the "fully automated business" measure |
+
+## 16. Standards bank: licensing rules
+
+- **What the public sees:** for any topic, which standards and laws cover it, the clause and page, Formcraft's own short explanation, the key values, and a link to buy the full standard from its publisher.
+- **No PDF files are shared.** Not paid standards and not free downloads. Each standard records its licence (public law, open licence, free to download, paid, or not known), and the website never serves files.
+- **Standards never show their wording.** Laws and government regulations are public documents, so their section text may be shown.
+- **Paid standards stay with their licence holder.** Copies Formcraft buys are for Formcraft's own use under their licence terms.
+- **Opportunity:** ask UNBS, KEBS and the East African standards office about a reseller, affiliate or library-access arrangement. The bank sends buyers to them, which can earn a referral income and makes access easier for professionals.
+- *Planning note, not legal advice: confirm the licence terms with each publisher.*
