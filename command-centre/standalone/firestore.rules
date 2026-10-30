@@ -1,0 +1,27 @@
+rules_version = '2';
+// Formcraft Command Centre: Firestore rules. Mirrors the access rules of the claude.ai version.
+// Replace OWNER_EMAILS with the founders' sign-in emails (same list as owners in formcraft-config.js).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function owner() { return signedIn() && request.auth.token.email in ['owner@example.com']; }
+    function hasRole() { return signedIn() && exists(/databases/$(database)/documents/roles/$(request.auth.uid)); }
+    function member() { return owner() || hasRole(); }
+    function admin() { return owner() || (hasRole() && get(/databases/$(database)/documents/roles/$(request.auth.uid)).data.role == 'Admin'); }
+
+    // Everything else: team members (anyone the admin has given a role) read and write.
+    match /{col}/{id} {
+      allow read, write: if member() && !(col in ['staff', 'payruns', 'ledger', 'budget', 'invoices', 'hires', 'reg_contracts', 'reg_investors', 'reg_candidates', 'lic', 'reg_accounts', 'reg_debts', 'reg_recurring', 'reg_lenders', 'who', 'meta', 'roles']);
+    }
+    // Money, people, contracts and licences: admin only.
+    match /{col}/{id} {
+      allow read, write: if admin() && col in ['staff', 'payruns', 'ledger', 'budget', 'invoices', 'hires', 'reg_contracts', 'reg_investors', 'reg_candidates', 'lic', 'reg_accounts', 'reg_debts', 'reg_recurring', 'reg_lenders'];
+    }
+    // Settings: everyone on the team reads, only admins change.
+    match /meta/{id} { allow read: if member(); allow write: if admin(); }
+    // Roles: admins assign; each person can read their own.
+    match /roles/{uid} { allow read: if member() || (signedIn() && request.auth.uid == uid); allow write: if admin(); }
+    // People list: each person writes their own entry; the team reads it.
+    match /who/{uid} { allow read: if member(); allow write: if admin() || (signedIn() && request.auth.uid == uid); }
+  }
+}

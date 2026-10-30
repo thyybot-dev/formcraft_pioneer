@@ -116,9 +116,39 @@ Agents can run on different providers. For example, the design agent on Claude, 
 |---|---|---|
 | 1 | AI hub, memory, agents, handover pack | Done in the Command Centre |
 | 2 | MCP server over backup JSON | Done in this repo |
-| 3 | Windows shell with SQLite and sync | To build |
-| 4 | Provider adapters and keychain keys | To build |
-| 5 | Ollama offline mode | To build |
+| 3 | Many PCs, one dataset: Firebase runtime, offline cache, sign-in, rules, installable app (`command-centre/standalone/`) | Built, not yet deployed |
+| 4 | Provider adapters (Anthropic and OpenAI-compatible, keys kept on each PC) | Built in the standalone runtime |
+| 5 | Ollama and LM Studio offline mode | Built in the adapter (set `provider: 'ollama'`) |
 | 6 | MCP client registry | To build |
 | 7 | Vector memory search | To build |
-| 8 | Phone PWA | To build |
+| 8 | Phone and Windows app (installable PWA) | Built, not yet deployed |
+
+
+## 9. Decision: one central database for many PCs (October 2026)
+
+Formcraft needs many PCs and phones on the same data. A JSON file or a SQLite file on one PC cannot safely take writes from several machines.
+
+**Options considered**
+
+| Option | Verdict |
+|---|---|
+| Own server (Node, with SQLite or Postgres) | Rejected for now: it means building and running sign-in, sync, backups and offline support ourselves. |
+| Firebase (Firestore, Auth, Storage, Hosting) | **Chosen.** The team already uses Firebase for the website, and the Command Centre's data calls (`collection().add`, `doc().set`, `onSnapshot`) already match Firestore's. |
+
+**What Firebase gives us without new building**
+- live sync across every device
+- an offline cache on each device
+- sign-in
+- access rules on the server
+- hosting
+
+**Safeguards**
+- It runs as a separate Firebase project from the website.
+- The `pending` collection is the only way AI changes data.
+- Regular JSON backups can be restored.
+
+**Revisit when** reporting needs SQL. At that point, add a nightly export to BigQuery or Postgres for analysis, and keep Firestore as the live store.
+
+**MCP server**
+- On one PC it still works over a backup file. It now has atomic writes and a lock.
+- For many PCs, the next step is a version that reads and writes Firestore using a service account.

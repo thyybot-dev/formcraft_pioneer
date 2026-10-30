@@ -5,7 +5,7 @@ Everything behind the plan to make **Formcraft Design and Construction** (Kampal
 | Folder | What is in it |
 |---|---|
 | `feasibility/` | **Formcraft-Feasibility-Report-2026.pdf** (branded, company only and shareable: cover, run 11 summary, contents, full Pioneer plan). `source/` has the Pioneer plan as Markdown and the original PDF export; `charts/` has the chart images made during the work. |
-| `command-centre/` | `index.html`: the whole Command Centre app (one file, about 500 KB, includes the AI hub and client on and offboarding). See `docs/command-centre.md`. |
+| `command-centre/` | `index.html`: the whole Command Centre app (one file, about 520 KB). `standalone/`: the same app on Formcraft's own Firebase project, for many PCs and phones on one dataset, offline, any AI provider. See `docs/command-centre.md` and `standalone/README.md`. |
 | `simulations/` | Every simulation engine (`.py`) and its results (`.json`), runs 1 to 11. See `simulations/README.md`. |
 | `profile/` | Emlyn Atochon's professional profile and development plan (branded PDF, Markdown and original exports), honest scenarios and risks, each venture on its own. |
 | `branding/` | Main Formcraft and division logos (PNG) and the brochure. |

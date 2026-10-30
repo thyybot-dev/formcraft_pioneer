@@ -1,0 +1,11 @@
+rules_version = '2';
+// Files and receipt photos: team members only. Replace the owner email as in firestore.rules.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /assets/{path=**} {
+      allow read, write: if request.auth != null && (request.auth.token.email in ['owner@example.com']
+        || firestore.exists(/databases/(default)/documents/roles/$(request.auth.uid)))
+        && (request.resource == null || request.resource.size < 25 * 1024 * 1024);
+    }
+  }
+}

@@ -52,3 +52,17 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
 - **Alerts:** overdue steps appear in the morning brief.
 - **AI action:** `start_journey`. New automations: CS-01, CS-02 and CS-03.
 - The full playbooks are in `rulebooks/client-onboarding-offboarding.md`.
+
+## Founders' daily, shared approvals and smarter automations (October 2026)
+
+- **Founders' daily** (first in the menu, and the landing page for founders) is one screen with:
+  - the morning brief;
+  - the approval queue;
+  - one live register: the sales pipeline, projects or client journeys;
+  - the 60-day habit check. The rule: each founder opens the Command Centre at least 5 days a week. If they all do, expand the system; if not, stop building and fix the habit.
+- **Collections:**
+  - `pending`: shared AI proposals. Fields: `a` (the action), status (pending, approved or rejected), agent, at, by, decided, decidedBy. Any founder on any device can approve or reject. The MCP server accepts the same shape.
+  - `usage`: one record per person per day they open the app. It feeds the habit check.
+- **Settings:** `founders` (who counts in the check), `dailyStart` and `dailyReg`.
+- **Automations:** there are now 122 automations (29 new, for example tender deadlines, RFI ageing, milestone billing, the 8-week cash forecast and defect close-out checks). 62 of them have an "upgrade": a second version that pulls context from another register. The upgrade is shown in green and is included in the AI recipe prompt.
+- **Restore:** under Access, a backup JSON can be restored into any database. Use it to move from claude.ai to the company Firebase project (`command-centre/standalone/`).
