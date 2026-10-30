@@ -4,8 +4,8 @@ Everything behind the plan to make **Formcraft Design and Construction** (Kampal
 
 | Folder | What is in it |
 |---|---|
-| `feasibility/` | **Formcraft-Feasibility-Report-2026.pdf** (branded: cover, run 11 summary, contents, full Pioneer plan, appendix). `source/` has the Pioneer plan as Markdown and the original PDF export; `charts/` has the chart images made during the work. |
-| `command-centre/` | `index.html`: the whole Command Centre app (one file, about 470 KB, includes the AI hub). See `docs/command-centre.md`. |
+| `feasibility/` | **Formcraft-Feasibility-Report-2026.pdf** (branded, company only and shareable: cover, run 11 summary, contents, full Pioneer plan). `source/` has the Pioneer plan as Markdown and the original PDF export; `charts/` has the chart images made during the work. |
+| `command-centre/` | `index.html`: the whole Command Centre app (one file, about 500 KB, includes the AI hub and client on and offboarding). See `docs/command-centre.md`. |
 | `simulations/` | Every simulation engine (`.py`) and its results (`.json`), runs 1 to 11. See `simulations/README.md`. |
 | `profile/` | Emlyn Atochon's professional profile and development plan (branded PDF, Markdown and original exports), honest scenarios and risks, each venture on its own. |
 | `branding/` | Main Formcraft and division logos (PNG) and the brochure. |
@@ -13,7 +13,7 @@ Everything behind the plan to make **Formcraft Design and Construction** (Kampal
 | `docs/` | How the Command Centre works, the data model, and the log of everything asked for. |
 | `tools/` | `build_report.py` rebuilds the branded PDFs; test harness for the Command Centre. |
 | `mcp-server/` | MCP server so any AI (Claude, OpenAI, local models) can use Command Centre data, memory and agents |
-| `rulebooks/agents/` | One rulebook per AI agent |
+| `rulebooks/` | One rulebook per AI agent (`agents/`) and the client onboarding and offboarding playbooks |
 
 Live versions: the Command Centre at https://claude.ai/artifact/QZwNFsyfC1TNZJeJu5PiRG and the Pioneer document at https://claude.ai/artifact/XhHE8xqA6KbhMHiAdjqtaw (private to the owner).
 

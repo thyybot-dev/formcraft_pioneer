@@ -1,8 +1,6 @@
-# Formcraft Pioneer
+# Formcraft Feasibility Report and Pioneer Plan
 
-Oct 29, 2026 · @emlyn
-
-Formcraft is the template: every system that can be planned, checked or run with AI is built here first, proven on real projects, then copied to Soko Foods, Logistics, Nyumba and the Trade Assistant. The method is the one already proven in Formcraft Tools: AI works only through Formcraft's own tools and by Formcraft's written rules, and a named person checks the result before release.
+Formcraft is the template: every system that can be planned, checked or run with AI is built here first, proven on real projects, then used across every Formcraft division. The method is the one already proven in Formcraft Tools: AI works only through Formcraft's own tools and by Formcraft's written rules, and a named person checks the result before release.
 
 ## Where Formcraft stands today
 
@@ -12,7 +10,7 @@ Formcraft already has more systems than most firms ten times its size, but almos
 
 - **Four divisions under one point of accountability:** Studio (BIM and CAD design, permits, renders), Construction (with partner contractors), Concrete (precast and green concrete) and Stores (furniture and joinery from the Kampala workshop), plus the Academy for artisans and students.
 - **2026 revenue:** about UGX 50M, mostly design work; the Ogala project paid UGX 10M for architecture, structure, MEP and renders.
-- **Team:** Emlyn builds; co-founders review and test; professionals are engaged per project.
+- **Team:** the lead designer builds; co-founders review and test; professionals are engaged per project.
 
 **What is already built.**
 
@@ -93,7 +91,7 @@ The same stack is also a product. The revenue streams it supports, with their pr
 - **Version lock:** families are Revit 2025 files and do not open in older versions; each yearly Revit release can change the API the add-in depends on, so every release needs the F-series tests re-run.
 - **Not yet professionally signed off:** the healthcare families are an evaluation sample, and discipline professionals' review is part of their sign-off.
 - **Known Revit limits:** the Medical Equipment category cannot join pipe systems, so medical gas and water reach those items through a nested service point.
-- **One builder:** most of the code and the recipes come from Emlyn. The work journal, handover notes and swap drill (Part 9) apply to the code as much as to the business.
+- **One builder:** most of the code and the recipes come from one founder. The work journal, handover notes and swap drill (Part 9) apply to the code as much as to the business.
 - **Licence cost:** Revit and the wider Autodesk tools are the most expensive part of the stack, which is why licences are bought only when a rollout phase needs them.
 
 ## The client portal: one account, one federated model, 1D to 7D
@@ -174,7 +172,7 @@ Every part of Formcraft gets an AI job, and every job runs from a written recipe
 
 **Function by function: what AI does, who approves, the number to watch.**
 
-1. **Content and social.** AI turns site, workshop and Revit footage into edited videos, Shorts, captions, translations and posts. Emlyn or the brand lead approves each video. Watch: leads per month from content.
+1. **Content and social.** AI turns site, workshop and Revit footage into edited videos, Shorts, captions, translations and posts. The lead designer or the brand lead approves each video. Watch: leads per month from content.
 2. **Website and funnel.** AI writes and tests landing pages, keeps SEO current and sends follow-up messages. Runs alone within approved offers. Watch: visitor-to-sign-up rate.
 3. **Sales assistant.** An AI assistant on WhatsApp and the website answers questions day and night, qualifies leads and books site visits. A person approves any price or promise. Watch: replies within 5 minutes; qualified leads per week.
 4. **Quotes.** AI builds fixed-package proposals from the model's quantities and the price list. The studio lead approves every quote. Watch: quote sent within 48 hours; win rate 30%+.
@@ -205,8 +203,6 @@ Porter's point is that advantage comes from two places only: doing an activity *
 - **The linkage is the moat.** The BIM model is the spine: it feeds quotes (sales), cut lists (operations), purchase orders (inbound), site progress (operations), transmittals (outbound) and handover manuals (service). A competitor can hire a designer or buy a CNC machine; copying a connected chain takes years.
 - **Strategy choice.** In Kampala, Formcraft competes on **differentiation** (design quality, speed, transparency, one point of accountability), not on being cheapest. AI is used on the cost side too, so the extra quality comes without a higher cost base.
 - **Where AI pays most.** Operations (the Revit agent and workshop automation) and marketing and sales (the content engine and assistant) are the shaded boxes. These two carry most of the hours, so they carry most of the savings.
-
-**Using it in the other ventures, honestly.** Porter designed the chain for firms that make physical things. It fits Formcraft and Soko Foods well: grain moves through sourcing, silos, milling, distribution, shops and service. It fits less well for Nyumba, the logistics app and the Trade Assistant. These businesses earn by connecting people (a network) or solving problems (a service). For them, the later "value network" and "value shop" versions of Porter's idea (Stabell and Fjeldstad, 1998) describe the work better. The same discipline still applies: list the activities, cost each one, find the linkages, and put AI where the hours are.
 
 ## The rulebook method: run the business the way Formcraft Tools runs Revit
 
@@ -377,7 +373,7 @@ These are the ways small design-and-build firms usually fail, with the control i
 - **Design liability.** Control: only registered professionals sign; professional indemnity insurance. Watch: claims and disputes.
 - **Tax and statutory penalties.** Control: monthly EFRIS, VAT, PAYE and NSSF checklist. Watch: filings on time.
 - **Client data and AI misuse.** Control: PDPO registration, consent forms, MCP-only access. Watch: data incidents (target zero).
-- **Depending on one person.** Emlyn runs five ventures; recipes must let others do the work. Watch: share of recipes run by someone other than Emlyn.
+- **Depending on one person.** The founders hold most of the know-how; recipes must let others do the work. Watch: share of recipes run by someone other than the lead founder.
 - **Depending on one client.** Watch: share of revenue from the largest client (keep under 40%).
 
 ### Part 5. The metrics register: what to record
@@ -430,7 +426,7 @@ Implementation, testing, feedback and improvement are one loop, run at five spee
 - **Weekly (Monday, 30 minutes):** audit 10 random outputs per function; review leads, quotes and cash; open a corrective action report (FMC-CAR) for every serious error.
 - **Monthly:** the KPI review against amber and red lines; the value chain scorecard (cost and value per activity); decide which recipes need changing.
 - **Quarterly:** release the next rulebook kit with its changed recipes and new tests; review autonomy levels (up after three clean months, down after a serious error); check the standards register for new laws or prices.
-- **Yearly:** a full rulebook review against ISO 9001 and ISO/IEC 42001; reset targets from real data; decide which proven recipes to copy to the other ventures.
+- **Yearly:** a full rulebook review against ISO 9001 and ISO/IEC 42001; reset targets from real data.
 
 **Automatic triggers.**
 
@@ -499,7 +495,7 @@ Formcraft relies on AI and automation, so it must never depend on one AI model o
 - **Tools, not memory.** Because AI acts only through MCP tools, a new model gets the same abilities and the same limits the moment it connects.
 - **Model-neutral recipes.** Recipes are written in plain language, with no tricks that only work on one vendor's model.
 - **The swap drill.** Every quarter, each new kit's edge tests are run on the backup model as well as the main one. The backup must pass at least 95% of what the main model passes, or the recipe is rewritten until it does.
-- **People can continue too.** The same journal and handover note let a new staff member pick up a job, which also answers the risk of depending on Emlyn.
+- **People can continue too.** The same journal and handover note let a new staff member pick up a job, which also answers the risk of depending on one person.
 
 **Metrics added to the register.** Swap-drill pass rate; share of open jobs with a current handover note (target 100%); time for a new model or person to resume a job; tasks closed without a journal entry (target zero).
 
@@ -513,7 +509,7 @@ In value chain terms, this is the marketing and sales activity. The idea: Formcr
 
 **The weekly rhythm.**
 
-- **Monday:** AI reviews last week's numbers and proposes 3 topics; Emlyn picks them.
+- **Monday:** AI reviews last week's numbers and proposes 3 topics; the lead designer picks them.
 - **Every working day:** site, workshop and Revit screen recordings are captured as part of the job, not as extra work.
 - **Tuesday and Thursday:** one long YouTube video each (a project walkthrough, a design explained, a cost breakdown, a Revit tutorial).
 - **Daily:** 1–2 Shorts or Reels cut by AI from the long videos, posted to every platform with captions in English and Luganda.
@@ -561,7 +557,7 @@ The base survival rates were recalibrated so that "no AI" matches the earlier mo
 2. **Ad hoc AI:** AI chat used freely, with content and global reach, but no recipes, no MCP tools, no tests.
 3. **Rulebook, tools staged:** recipes, MCP tools and tests; each phase passes its gate with a 75% chance a year; licences bought as phases need them.
 4. **Rulebook, full stack day one:** the same, but every licence is bought in 2027.
-5. **Rulebook, slow rollout:** gates pass with only a 40% chance a year, for example because Emlyn's time is split across five ventures.
+5. **Rulebook, slow rollout:** gates pass with only a 40% chance a year, for example because the founders' time is split across other work.
 6. **Rulebook, best practice:** gates pass with a 90% chance a year, and execution is stronger than average.
 
 **What the results show.**
@@ -590,10 +586,10 @@ This section collects every simulation run for Formcraft. Run 6 is the latest, r
 
 **The simulation log.**
 
-1. **Run 1, first Monte Carlo (all ventures):** 10,000 futures per scenario, 4 scenarios. Superseded.
-2. **Run 2, five simulation types (all ventures):** deterministic plan, Monte Carlo, levers, survival and conditional runs, 6,000–10,000 futures each. Superseded.
-3. **Run 3, vectorised engine (all ventures):** 1 million futures per scenario, 6 scenarios, run twice (about 12 million). Superseded.
-4. **Run 4, AI, YouTube and global reach (all ventures, then Formcraft alone):** 18 group scenarios of 1 million futures each (Formcraft as part of the group: 54.5% running in 2036, 30% reach USD 100M, 12.4% reach USD 1B), plus Formcraft alone in 5 settings of 400,000 futures each. Its chart is below for reference.
+1. **Run 1, first Monte Carlo (group model):** 10,000 futures per scenario, 4 scenarios. Superseded.
+2. **Run 2, five simulation types (group model):** deterministic plan, Monte Carlo, levers, survival and conditional runs, 6,000–10,000 futures each. Superseded.
+3. **Run 3, vectorised engine (group model):** 1 million futures per scenario, 6 scenarios, run twice (about 12 million). Superseded.
+4. **Run 4, AI, YouTube and global reach (group model, then Formcraft alone):** 18 group scenarios of 1 million futures each (Formcraft as part of the group: 54.5% running in 2036, 30% reach USD 100M, 12.4% reach USD 1B), plus Formcraft alone in 5 settings of 400,000 futures each. Its chart is below for reference.
 5. **Run 5, rulebook model (Formcraft alone):** 6 settings of 1 million futures, run three times while the model was calibrated and corrected, plus a 2-million-future test of scripts (about 21 million). Its chart is in the outcome section above.
 6. **Run 6, the full Pioneer suite (Formcraft alone):** 29 million futures. The charts below.
 
@@ -655,7 +651,7 @@ If every year goes exactly to plan (the ramp to USD 1.03M in 2031, then 30% grow
 
 ## Run 7: an objective review of the whole Pioneer page
 
-Run 7 reads the full page (the rulebook, the tool stack, the Revit system, the client portal, scripts and continuity) and asks what the earlier runs left out. Five things were missing, so run 7 adds them: **team capacity and hiring** (work can be turned away), **key-person risk** (Emlyn), **founder focus** (five ventures), **the developer who speeds up the build queue**, and **the client portal**. It also adds a second kind of simulation: a **month-by-month cash and capacity model** of the first 36 months. Run 7 used 11.8 million futures (10 annual runs of 1 million, 4 monthly runs of 200,000), bringing the total for this page to about 95 million.
+Run 7 reads the full page (the rulebook, the tool stack, the Revit system, the client portal, scripts and continuity) and asks what the earlier runs left out. Five things were missing, so run 7 adds them: **team capacity and hiring** (work can be turned away), **key-person risk** (the lead founder), **founder focus** (time shared with other work), **the developer who speeds up the build queue**, and **the client portal**. It also adds a second kind of simulation: a **month-by-month cash and capacity model** of the first 36 months. Run 7 used 11.8 million futures (10 annual runs of 1 million, 4 monthly runs of 200,000), bringing the total for this page to about 95 million.
 
 ### First, the objective review
 
@@ -663,7 +659,7 @@ Run 7 reads the full page (the rulebook, the tool stack, the Revit system, the c
 
 **What is weak or risky.**
 
-- **Too much for one builder.** The build queue shows 7 of 120 tasks done, the server rebuild, the rulebook, the portal, the content engine and five ventures all depend on Emlyn. Run 7 cuts the rollout speed by 20% unless a developer is hired.
+- **Too much for one builder.** The build queue shows 7 of 120 tasks done, the server rebuild, the rulebook, the portal, the content engine and other commitments all depend on one founder. Run 7 cuts the rollout speed by 20% unless a developer is hired.
 - **The revenue plan is steep.** It rises from about USD 46,000 in 2027 to USD 1.03M in 2031, more than 20 times in four years. The monthly simulation's middle case reaches USD 240,000 in 2029, about 26% behind the plan's USD 324,000.
 - **Cash is thin.** With about USD 3,000 in hand and no buffer, cash goes below zero in at least one month in more than half of the simulated futures.
 - **Capacity limits growth.** At about USD 30,000 of revenue per person, the plan's 2031 revenue needs 20 to 25 people. Hiring trained BIM staff in Kampala is slow, and work turned away hurts reputation.
@@ -673,17 +669,17 @@ Run 7 reads the full page (the rulebook, the tool stack, the Revit system, the c
 
 &#91;embedded content\]
 
-- **The hiring plan beats building alone, but only modestly:** 59.6% against 58.3% still running in 2036; 41.7% against 39.1% for USD 100M; 19.7% against 17.8% for USD 1B. Its main gain is lower key-person risk: the chance of an Emlyn shock by 2036 falls from 36% to 29%.
+- **The hiring plan beats building alone, but only modestly:** 59.6% against 58.3% still running in 2036; 41.7% against 39.1% for USD 100M; 19.7% against 17.8% for USD 1B. Its main gain is lower key-person risk: the chance of a key-person shock by 2036 falls from 36% to 29%.
 - **Hiring too early hurts.** In a first version of run 7, the developer and deputy were paid from 2027, and the hiring plan did *worse* than building alone because salaries ran ahead of revenue. Hiring when revenue passes USD 100,000 and USD 250,000 turned that around. Hire on triggers, not on dates.
 - **The client portal adds about 2.4 points** to the chance of USD 100M and lifts 2036 revenue by about 12%, through trust, conversion and fewer critical disputes.
-- **Splitting Emlyn across five ventures** costs about 3 points of survival and 3 points of the USD 100M chance, and raises key-person risk to 40%.
+- **Splitting the lead founder's time across other work** costs about 3 points of survival and 3 points of the USD 100M chance, and raises key-person risk to 40%.
 - **Best practice** (fast gates, strong execution, the hiring plan): 64% still running in 2036, 46% chance of USD 100M, 23% of USD 1B.
 
 ### Key-person risk and hiring success
 
 &#91;embedded content\]
 
-- **If Emlyn is out for a full year in 2028,** survival to 2036 falls by about 6 points in every setting. The deputy cannot help yet, because the trigger for hiring one (USD 250,000 revenue) is rarely reached by 2028. What protects Formcraft early is the work journal, handover notes and recipes that let others continue (Part 9).
+- **If the lead founder is out for a full year in 2028,** survival to 2036 falls by about 6 points in every setting. The deputy cannot help yet, because the trigger for hiring one (USD 250,000 revenue) is rarely reached by 2028. What protects Formcraft early is the work journal, handover notes and recipes that let others continue (Part 9).
 - **Hiring success matters more than any single AI lever.** If only half of planned hires work out, the chance of USD 100M falls to 38% and about USD 2.1M of work is turned away by 2036. At 90% success, it rises to 43%. The Academy is the hiring pipeline: train people in Formcraft Tools before they are needed.
 
 ### The first 36 months, month by month
@@ -711,7 +707,7 @@ This causal loop view is the third kind of simulation used on this page (after M
 4. **Pricing loop:** win rate above 50% for a quarter → raise prices; below 20% → review offer and price.
 5. **Capacity loop:** utilisation above 85% for two months → start hiring; below 60% → pause hiring and push sales.
 6. **Cash loop:** runway under 3 months → freeze hires and tool spend; over 6 months → release the next hire or system.
-7. **Key-person loop:** share of recipes run by someone other than Emlyn, and the quarterly swap drill → recipes rewritten until others can run them.
+7. **Key-person loop:** share of recipes run by someone other than the lead founder, and the quarterly swap drill → recipes rewritten until others can run them.
 8. **Client loop:** client score and referrals at close → service and portal changes.
 9. **Script loop:** tasks repeated three times → script candidates → built, tested and released.
 
@@ -832,7 +828,7 @@ Every long video follows this map. Recipe MKT-02 makes AI write the script again
 
 Every step is a recipe in the rulebook (chapter RB-08, codes FMC-RCP-MKT-01 to 06), run by AI through MCP tools, with the same rules as every other recipe: written steps, edge tests, a named approver, logs and a fallback.
 
-1. **MKT-01 Idea and package.** Each week AI proposes 25 ideas from comments, search trends, site and workshop events and past performance, and writes 3 titles and a thumbnail brief for each. Emlyn picks.
+1. **MKT-01 Idea and package.** Each week AI proposes 25 ideas from comments, search trends, site and workshop events and past performance, and writes 3 titles and a thumbnail brief for each. The lead designer picks.
 2. **MKT-02 Script.** AI writes the script against the retention map, pulling every number from the model, the bill of quantities and the rate library, never from memory.
 3. **MKT-03 Visuals.** Renders and fly-throughs come straight from the Revit model through the Blender pipeline; AI animates cost counters, plans and before-and-after sequences; site and workshop footage comes from the Bench app and phones.
 4. **MKT-04 Edit and voice.** AI cuts to the script, removes dead time, adds captions, and dubs into English, Luganda and Swahili. A real person's voice is cloned only with their written consent.
@@ -853,7 +849,7 @@ Every step is a recipe in the rulebook (chapter RB-08, codes FMC-RCP-MKT-01 to 0
 &#91;embedded content\]
 
 - **Cadence:** one hero video a month (the wow moment); two series episodes a week; one or two Shorts a day; one live stream a month (a design review or Q&A).
-- **The team (A-players):** Emlyn as on-camera lead and final approver; a content producer from the Academy who runs the recipes; an editor-thumbnail designer; a second presenter for Luganda content. AI does the rest.
+- **The team (A-players):** the lead designer as on-camera lead and final approver; a content producer from the Academy who runs the recipes; an editor-thumbnail designer; a second presenter for Luganda content. AI does the rest.
 - **Budget:** about USD 300–1,000 a month for the hero video and paid boosts, funded mostly by supplier sponsors once views are proven. Sponsors get product placement in real builds, never false claims.
 - **Two channels:** Formcraft for clients (most series) and Formcraft Tools for professionals (AI vs Architect, Revit Speedruns).
 
@@ -877,10 +873,10 @@ This plan lists what Formcraft needs legally, in the order to put it in place. I
 &#91;embedded content\]
 
 - **Now:** one private limited company under the Companies Act 2012, registered with URSB, with a written shareholders' agreement between the co-founders.
-- **Assign the IP first.** Formcraft Tools, the rulebook, the scripts, the families and the template library were largely written by Emlyn. Until a signed IP assignment (or exclusive licence) moves them into the company, the company does not own its most valuable asset, and no investor or buyer will value it. This is the single most urgent legal task.
-- **Later, when investors, large contracts or a second venture arrive:** a holding company that owns (1) an operating company that signs client and contractor contracts and carries site and design liability, and (2) a technology company that owns the IP and licenses it to the group and to the market. A building claim then cannot reach the software, and the software can be sold or funded separately. Soko Foods, Logistics, Nyumba and the Trade Assistant each become their own company under the same holding company.
+- **Assign the IP first.** Formcraft Tools, the rulebook, the scripts, the families and the template library were largely written by one founder. Until a signed IP assignment (or exclusive licence) moves them into the company, the company does not own its most valuable asset, and no investor or buyer will value it. This is the single most urgent legal task.
+- **Later, when investors, large contracts or a second venture arrive:** a holding company that owns (1) an operating company that signs client and contractor contracts and carries site and design liability, and (2) a technology company that owns the IP and licenses it to the group and to the market. A building claim then cannot reach the software, and the software can be sold or funded separately.
 
-**The shareholders' agreement must cover:** each founder's role and time commitment (especially with five ventures); vesting of founder shares over about four years with a one-year cliff; what happens if a founder leaves, falls ill or dies (key-person clauses, buy-back, insurance); decision rights and deadlock; IP assignment; non-compete and non-solicit; an option pool for key hires such as the developer and deputy; and how new investors come in.
+**The shareholders' agreement must cover:** each founder's role and time commitment; vesting of founder shares over about four years with a one-year cliff; what happens if a founder leaves, falls ill or dies (key-person clauses, buy-back, insurance); decision rights and deadlock; IP assignment; non-compete and non-solicit; an option pool for key hires such as the developer and deputy; and how new investors come in.
 
 ### Registrations and licences
 
@@ -919,7 +915,7 @@ Every contract is a template in the FMC numbering system (proposed family code F
 
 **With suppliers and manufacturers.** Supply terms, and for the family-matching service a mutual NDA plus clear rules on who owns the modelled families.
 
-**Inside the group and with investors.** Intercompany service and IP licence agreements with the other ventures (so Formcraft is paid for the systems it builds for them); NDAs; MoUs with partners; and investor papers (term sheet, convertible note or SAFE, subscription and shareholders' agreements) when funding is raised.
+**Inside the group and with investors.** Intercompany service and IP licence agreements between group companies; NDAs; MoUs with partners; and investor papers (term sheet, convertible note or SAFE, subscription and shareholders' agreements) when funding is raised.
 
 ### Intellectual property
 
@@ -936,7 +932,7 @@ Every contract is a template in the FMC numbering system (proposed family code F
 - Property and equipment cover for the workshop, machines and computers.
 - Product liability for Stores furniture and precast concrete.
 - Cyber cover once the portal holds client data and payments.
-- Key-person cover on Emlyn, as the simulations show the business depends on him.
+- Key-person cover on the lead founder, as the simulations show the business depends on that role.
 
 ### Disputes
 
@@ -1092,11 +1088,11 @@ These simulations are careful arithmetic on assumptions, and some of the assumpt
 
 - **It treats Formcraft as one business growing smoothly.** One large contract (for example the Lubowa hospital pack or a factory) could jump revenue in a single year.
 - **Software is modelled like services.** If Formcraft Tools sells well outside Uganda, its growth would not be limited by staff the way design work is.
-- **No help from the other ventures** is counted, such as cross-selling with Nyumba or Soko Foods.
+- **No help from partner businesses** is counted, such as cross-selling.
 
 **What to trust, and how much.**
 
-- **Trust the comparisons more than the absolute numbers.** Every run gives the same answers: rules beat ad hoc AI, staged tools beat buying everything at once, hire on triggers rather than dates, a cash buffer and signed legal papers are cheap insurance, and Emlyn is the biggest single risk.
+- **Trust the comparisons more than the absolute numbers.** Every run gives the same answers: rules beat ad hoc AI, staged tools beat buying everything at once, hire on triggers rather than dates, a cash buffer and signed legal papers are cheap insurance, and dependence on one founder is the biggest single risk.
 - **Trust the near-term numbers more than the long-term ones.** The middle case of about USD 46,000 in 2027, USD 134,000 in 2028 and USD 238,000 in 2029, and a 55–60% chance of a cash shortfall without a buffer, rest on assumptions that can be checked within months.
 - **Distrust the USD 1B figures most.** They are 45-year cumulative totals built on growth assumptions few firms achieve.
 
@@ -1205,27 +1201,27 @@ Run 9 added the AI content factory (a 45% chance that a series format takes off,
 - **The content factory raises the upside more than the middle.** The USD 1B chance rises by about 1.4 points and revenue in 2036 by 5%, but survival dips slightly, because content costs money every year whether a series takes off or not. Its real value is in the leads it brings, which this model counts only roughly.
 - **The standards bank (index model)** adds about 5% to revenue by 2036 and lifts the USD 1B chance from 28.9% to 30.0%, with a small early cost. Hosting copyrighted texts makes everything worse.
 - **Everything together, today's Pioneer plan:** about 67% still running in 2036, 52% chance of USD 100M lifetime revenue, 30% of USD 1B; best practice 70%, 56% and 33%; sceptic assumptions 64%, 43% and 21%.
-- **The honest reading has not changed.** Each new system adds a little; none changes the picture alone. The big moves are still the cash buffer, signed legal papers, the rulebook, hiring on triggers, and Emlyn's focus. The lifetime revenue figures remain soft targets, and the Command Centre's live simulation will show, month by month, whether Formcraft is beating them or falling behind.
+- **The honest reading has not changed.** Each new system adds a little; none changes the picture alone. The big moves are still the cash buffer, signed legal papers, the rulebook, hiring on triggers, and the founders' focus. The lifetime revenue figures remain soft targets, and the Command Centre's live simulation will show, month by month, whether Formcraft is beating them or falling behind.
 
-## Copying the pioneer to the other ventures
+## AI hub, memory, agents and model independence
 
-Formcraft builds each system first, proves it against its gate, and only then copies it. Every venture gets the same value chain map, so the same questions are asked everywhere: what are our nine activities, what does each cost, where is the margin, and where does AI take the hours.
+Formcraft's knowledge must belong to Formcraft, not to any AI provider. The Command Centre therefore works in three modes: with no AI (everything by hand and by scripts), with an offline model on the PC (Ollama or LM Studio), and fully AI-assisted once a subscription or API key is added (Anthropic, OpenAI, Gemini, Mistral or any OpenAI-compatible service). The app picks the best available mode by itself and queues AI work when no model is reachable.
 
-**What carries over unchanged.**
+**Memory.** Short-term memory is the log of every AI exchange (`ailog`); the last eight per agent go with each new question. Long-term memory (`memory`) holds short facts, decisions, preferences, lessons and rules, scoped to the whole company or to one agent, and pinnable. A consolidation step (button, or a weekly scheduled task) turns exchanges into long-term memories. Business data stays in its own registers and is read live. All of it is plain JSON in every backup.
 
-- The rulebook method: written recipes, shared codes, MCP-only tools, edge tests, named approvers, numbered kits and one build queue.
-- The autonomy ladder and the weekly audit.
-- The content engine and the website funnel template.
-- The WhatsApp and web AI assistant (new knowledge base, same system).
-- Finance automation: EFRIS invoicing, mobile money reconciliation, the monthly cash report.
-- The document system: FMC-style numbering, templates and version control.
-- The value chain scorecard and management dashboard.
+**Agents.** One general agent (chief of staff) plus one per area: finance, sales and marketing, projects and site, design and BIM, software and automation, people and admin, legal and risk. Each has its own rulebook, memory scope, model tier (quick, default or complex) and autonomy level from L0 (read only) to L4 (act on approved routines). Money, people, contracts and anything sent outside always need approval. Different agents may run on different providers, including an offline model for private work.
 
-**What each venture adds to its own chain.**
+**Changing provider.** The AI hub exports a handover pack (format formcraft-handover/1) with the company record, rules, agents, memory, recent exchanges, targets, open work, systems and tools. A new model reads it, or reads it live through MCP, and continues where the last one stopped.
 
-- **Soko Foods (classic chain).** Inbound: farmer and plantation sourcing, silo stock levels. Operations: drying, milling, quality tests. Outbound: deliveries to schools, the army and shops. Marketing and sales: community buying and online orders. Service: the food-bank shop model and franchise support. AI focus: demand forecasting, stock and price alerts, quality records.
-- **Logistics (chain plus network).** Its operations are outbound logistics for others. AI focus: routing, rider scheduling, battery and maintenance tracking, then matching loads to trucks in the app.
-- **Nyumba (value network).** Value comes from connecting tenants and landlords. AI focus: listing checks, fraud screening, matching, the USD 5 landlord fee flow.
-- **Trade Assistant (value shop).** Value comes from solving each trader's problem. AI focus: research, back-testing, risk rules, and support for the tools sold to the market.
+**MCP hub.** The Formcraft MCP server (in the repo, `mcp-server/`) exposes the Command Centre's tools, data, memory and agent prompts to any MCP-capable AI. The Windows app will also act as an MCP client, connecting agents to the Revit plugin, email, calendar, files and accounting under the same approval rules.
 
-**The rule for copying:** a system moves to another venture only after it has passed its gate at Formcraft, and it arrives with its tests, its rulebook entry and its owner.
+| Step | Status |
+| --- | --- |
+| AI hub, memory, agents, handover pack in the Command Centre | Done |
+| MCP server over the backup file | Done (repo) |
+| Windows app: local database, offline mode, sync | To build |
+| Provider adapters with keys in Windows Credential Manager | To build |
+| Offline model through Ollama | To build |
+| MCP client registry, vector memory search, phone app | To build |
+
+KPI: by Q2 2027, switching AI provider takes under 30 minutes with no loss of memory, and 100% of AI-made changes to money or people pass through approval.

@@ -41,3 +41,14 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
 - **Handover pack:** JSON or Markdown, used to switch AI provider.
 - **MCP manifest:** a download from the AI hub page.
 - See `docs/architecture-ai-hub.md` and `mcp-server/`.
+
+## Client on and offboarding (added October 2026)
+
+- **Page:** Client on and offboarding, under Business.
+- **Playbooks:** one onboarding and one offboarding playbook for each of 7 services and products: design, construction and design-and-build, Concrete, Stores, BIM services, Formcraft Tools licences, and advisory. Each step has an owner, a due day, the template or register to use, and its automation. You can add your own steps per service (saved in `settings.obExtra`).
+- **Collection `onb`:** client, line, kind (Onboarding or Offboarding), start, owner, project, done (step index → date and who), status, closed.
+- **Suggestions:** journeys are suggested from won deals, completed projects, and expired or revoked licences.
+- **Actions:** tick steps, put the open steps on the task board, download a Word checklist, have the AI draft the welcome or close-out message, close a journey, or start offboarding from an onboarding.
+- **Alerts:** overdue steps appear in the morning brief.
+- **AI action:** `start_journey`. New automations: CS-01, CS-02 and CS-03.
+- The full playbooks are in `rulebooks/client-onboarding-offboarding.md`.

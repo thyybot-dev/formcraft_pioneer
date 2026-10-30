@@ -65,7 +65,7 @@ def merge(parts, dst):
     wr.write(dst)
 
 def build_feasibility():
-    body = f'{R}/feasibility/source/Formcraft-Pioneer.pdf'; appx = f'{R}/profile/Honest-scenarios-and-risks.pdf'
+    body = f'{R}/feasibility/source/Formcraft-Pioneer.pdf'
     heads = [l[3:].strip() for l in open(f'{R}/feasibility/source/Formcraft-Pioneer.md', encoding='utf-8') if l.startswith('## ')]
     pages = page_of(body, heads)
     S = json.load(open(f'{R}/simulations/fcrun11.json'))
@@ -74,8 +74,6 @@ def build_feasibility():
     rows = ''.join(f"<tr><td>{k}</td><td class=n>{pc(S[k]['alive2036'])}</td><td class=n>{pc(S[k]['p1m2031'])}</td><td class=n>{pc(S[k]['p100'])}</td><td class=n><b>{pc(S[k]['p1b'])}</b></td></tr>" for k in order)
     FRONT = 4
     toc = ''.join(f"<a><span>{h}</span><span>{pages[h] + FRONT if h in pages else ''}</span></a>" for h in heads)
-    nb = len(PdfReader(body).pages)
-    toc += f"<a><span><b>Appendix: Honest scenarios and risks</b></span><span>{nb + FRONT + 1}</span></a>"
     k = S[order[1]]
     bars = ''.join(f"<div style='display:flex;align-items:center;gap:3mm;margin:1.6mm 0;font-size:9pt'><span style='width:62mm'>{lab}</span><div style='flex:1;background:#eef1f3;height:5mm;border-radius:1mm'><div style='width:{S[key]['p1b']/0.4*100:.0f}%;max-width:100%;height:5mm;background:{col};border-radius:1mm'></div></div><b style='width:13mm;text-align:right'>{pc(S[key]['p1b'])}</b></div>" for lab, key, col in [('Sceptic settings', order[4], '#c0392b'), ('Growth capped after 2036', order[5], '#b7791f'), ('Run 10 plan, no Command Centre', order[0], '#8a96a0'), ('With the Command Centre (likely use)', order[1], TEAL), ('Command Centre used every day', order[2], TEAL), ('Command Centre and best practice', order[3], NAVY)])
     hdr = f"<div class=hdr><img src='data:image/png;base64,{LOGO}'><span>Feasibility report · {TODAY}</span></div>"
@@ -83,11 +81,11 @@ def build_feasibility():
 <div class='pg cover'><div class=shape></div><div class=shape2></div><img class=logo src='data:image/png;base64,{LOGOW}'>
 <h1>Feasibility Report<br>and Pioneer Plan</h1><div class=sub>Making Formcraft Design and Construction a leading firm in East Africa: strategy, systems, AI plan, legal and financial plans, and Monte Carlo simulations of the road to a billion.</div>
 <div class=divs>{''.join(f"<img src='data:image/png;base64,{d}'>" for d in DIVS)}</div>
-<div class=meta>Prepared for Emlyn Atochon, co-founder and lead designer<br>Kampala, Uganda · {TODAY}<br>Confidential</div><div class=band></div></div>
+<div class=meta>Prepared by Formcraft Design and Construction Co. Ltd<br>Kampala, Uganda · {TODAY}<br>For partners, investors and advisers</div><div class=band></div></div>
 <div class=pg>{hdr}<h2>About this report</h2>
 <p>This report sets out how Formcraft Design and Construction can become a leading design, BIM and construction firm in East Africa, and what it would take to reach USD 1 billion of lifetime revenue. It brings together the Formcraft Pioneer plan: where Formcraft stands, the Formcraft Tools and Revit system, the client portal, AI in every function under the rulebook method, Porter's value chain, the content engine, the legal, financial, sales and project-management plans, the standards bank and the Formcraft Command Centre.</p>
 <p>Every forecast in it comes from Monte Carlo simulations of about one million possible futures per scenario, built on the plan's own assumptions. They are tools for comparing choices, not promises. The near-term figures (survival, revenue by 2031 and 2036) are the most reliable; lifetime figures to 2072 rest on decades of assumed growth and should be read as soft.</p>
-<h3>How to read it</h3><ul><li>Front pages: this introduction, the latest simulation (run 11, including the Command Centre) and the contents.</li><li>Main body: the full Pioneer plan, with every chart and simulation run.</li><li>Appendix: honest scenarios and risks across all of Emlyn's ventures.</li></ul>
+<h3>How to read it</h3><ul><li>Front pages: this introduction, the latest simulation (run 11, including the Command Centre) and the contents.</li><li>Main body: the full Pioneer plan, with every chart and simulation run.</li></ul>
 <div class=note>Figures for tax, law and incentives in Uganda were checked at the time of writing and change with each budget. Confirm with a tax adviser or lawyer before acting.</div>
 <div class=foot><span>Formcraft Design and Construction</span><span>2</span></div></div>
 <div class=pg>{hdr}<h2>Run 11: the chance of a billion, with the Command Centre</h2>
@@ -102,11 +100,10 @@ def build_feasibility():
     os.makedirs('/tmp/fr', exist_ok=True)
     html_pdf(html, '/tmp/fr/front.pdf')
     overlay(body, '/tmp/fr/body.pdf', 'Feasibility report and Pioneer plan')
-    overlay(appx, '/tmp/fr/appx.pdf', 'Appendix: honest scenarios and risks')
     back = f"""<html><head><meta charset=utf-8><style>{CSS}</style></head><body><div class='pg cover'><div class=shape></div><img class=logo src='data:image/png;base64,{LOGOW}' style='top:120mm;left:66mm'>
 <div class=meta style='left:0;right:0;text-align:center'>Formcraft Design and Construction · Kampala, Uganda<br>formcraftdesignconstruction.com</div><div class=band></div></div></body></html>"""
     html_pdf(back, '/tmp/fr/back.pdf')
-    merge(['/tmp/fr/front.pdf', '/tmp/fr/body.pdf', '/tmp/fr/appx.pdf', '/tmp/fr/back.pdf'], f'{R}/feasibility/Formcraft-Feasibility-Report-2026.pdf')
+    merge(['/tmp/fr/front.pdf', '/tmp/fr/body.pdf', '/tmp/fr/back.pdf'], f'{R}/feasibility/Formcraft-Feasibility-Report-2026.pdf')
 
 def build_profile():
     src = f'{R}/profile/Emlyn-Atochon--Professional-Profile-and-Development-Plan.pdf'
@@ -118,4 +115,7 @@ def build_profile():
     merge(['/tmp/fr/pcover.pdf', '/tmp/fr/pbody.pdf'], f'{R}/profile/Emlyn-Atochon-Professional-Profile-2026.pdf')
 
 if __name__ == '__main__':
-    build_feasibility(); build_profile(); print('built')
+    import sys
+    build_feasibility()
+    if 'profile' in sys.argv: build_profile()
+    print('built')
