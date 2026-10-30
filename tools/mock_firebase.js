@@ -11,5 +11,5 @@ window.firebase={initializeApp(){},auth:Object.assign(()=>authI,{GoogleAuthProvi
 let n=0;window.fetch=async(u,o)=>{const b=JSON.parse(o.body);window.__lastAI={u,auth:o.headers.authorization,model:b.model,tools:(b.tools||[]).length,msgs:b.messages.length};n++;
  const toolTurn=b.tools&&b.tools.length&&!b.messages.some(m=>m.role==='tool');
  const msg=toolTurn?{role:'assistant',content:null,tool_calls:[{id:'c1',type:'function',function:{name:'propose_actions',arguments:JSON.stringify({actions:[{type:'add_task',t:'Chase Ggaba deposit',due:'2026-11-02'}]})}}]}:{role:'assistant',content:'1. Chase the Ggaba deposit today (Emlyn).'};
- return {ok:true,json:async()=>({choices:[{message:msg}]})};};
+ return {ok:true,json:async()=>({choices:[{message:msg}],usage:{prompt_tokens:1200,completion_tokens:300}})};};
 })();

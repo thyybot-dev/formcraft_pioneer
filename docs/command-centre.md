@@ -173,3 +173,25 @@ A 2D architecture canvas for the design stage, in the spirit of Rayon and AutoCA
 - **Collections:** `boards`, `bel` (elements), `brev` (revision log).
 - **Access:** Design and BIM and Partner roles. Owners choose tabs per person. A Client role with access to only their own boards is planned.
 - **Data explorer** (under Build and AI): every collection in the database with its record count. Search across all fields, sort by any column, open a record to see all of it, and export to Excel or JSON. What a person can see follows the database rules: admin-only collections stay empty for others.
+
+## AI cost, and Claude, Grok and DeepSeek (October 2026)
+
+- **Every AI call is recorded** (collection `aiuse`). The app's AI connection is wrapped so nothing is missed. Each record holds the page, agent or role, model size, provider, tokens in and out, time taken, success and cost.
+  - In the web version and the hub, token counts come from the provider's own response.
+  - In claude.ai they are estimated at about 4 characters per token, and the subscription covers the real cost. The page then shows what the same work would cost on pay-per-use.
+- **AI cost page** (under Build and AI) shows:
+  - lifetime cost, including earlier exchanges estimated from the AI log;
+  - this month's cost and where the month is heading;
+  - tokens, and the average cost and time per call;
+  - a month-by-month chart with the lifetime total;
+  - cost broken down by page, agent, model size and provider;
+  - each role's spending against its monthly budget, turning red at 80%;
+  - savings: automation runs that replaced AI calls, offline calls at no cost, the share of work done by scripts, and entries logged by hand;
+  - the biggest calls, which are the targets for trimming the context sent;
+  - a subscription comparison;
+  - a price table per provider (Claude, Grok, DeepSeek; offline is free). A provider not yet priced is flagged and uses a starting guess.
+- **Providers.** The main models are Claude, Grok (xAI) and DeepSeek, plus an offline model.
+  - The standalone runtime routes each model size to its own provider (`ai.tiers` in `formcraft-config.js`), for example DeepSeek for small jobs, Claude for standard and deep work, and Grok for second opinions and cross-checks.
+  - Grok and DeepSeek use their OpenAI-compatible APIs.
+  - Each provider's key is kept on that PC only.
+  - If a provider or the internet fails, the offline model takes over automatically.

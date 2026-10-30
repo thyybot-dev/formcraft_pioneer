@@ -12,5 +12,5 @@ await p.evaluate(()=>location.hash='daily');await p.waitForTimeout(300);
 await p.click('[data-aiopen]');await p.waitForTimeout(200);await p.fill('#aiq','plan my day');await p.$eval('form[data-f=ai] button:not([type])',e=>e.click());await p.waitForTimeout(1500);
 console.log('ai',JSON.stringify(await p.evaluate(()=>window.__lastAI)));
 console.log('pending docs',await p.evaluate(()=>Object.values(window.__store.pending||{}).length),'ailog',await p.evaluate(()=>Object.keys(window.__store.ailog||{}).length),'usage',await p.evaluate(()=>Object.keys(window.__store.usage||{})),'who',JSON.stringify(await p.evaluate(()=>window.__store.who)));
-console.log('collections',await p.evaluate(()=>Object.keys(window.__store).join(',')));
+console.log('aiuse',await p.evaluate(()=>JSON.stringify(Object.values(window.__store.aiuse||{}).map(u=>[u.provider,u.tier,u.inTok,u.outTok,u.est,u.cost]))));console.log('collections',await p.evaluate(()=>Object.keys(window.__store).join(',')));
 console.log('ERR',JSON.stringify(errs.slice(0,8)));await b.close();})();

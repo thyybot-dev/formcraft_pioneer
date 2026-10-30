@@ -82,35 +82,43 @@
   };
 
   // ---- AI adapter: one interface for every provider ----
+  // Each model size (quick, default, complex) can use a different provider: for example DeepSeek for quick work,
+  // Claude for deep work, Grok where chosen, and an offline model when there is no internet.
   const AIC = C.ai || {};
-  function aiKey() { if (AIC.provider === 'ollama' || AIC.provider === 'lmstudio') return ''; let k = localStorage.getItem('fc_ai_key');
-    if (!k) { k = prompt('Paste the ' + (AIC.provider || 'AI') + ' API key for this PC. It stays on this PC only.'); if (k) localStorage.setItem('fc_ai_key', k.trim()); } return k || ''; }
-  window.fcSetAIKey = k => k ? localStorage.setItem('fc_ai_key', k) : localStorage.removeItem('fc_ai_key');
-  const model = tier => (AIC.models || {})[tier || 'default'] || (AIC.models || {}).default;
+  const BASE = { anthropic: 'https://api.anthropic.com', claude: 'https://api.anthropic.com', openai: 'https://api.openai.com/v1', grok: 'https://api.x.ai/v1', xai: 'https://api.x.ai/v1', deepseek: 'https://api.deepseek.com', gemini: 'https://generativelanguage.googleapis.com/v1beta/openai', mistral: 'https://api.mistral.ai/v1', ollama: 'http://localhost:11434/v1', lmstudio: 'http://localhost:1234/v1' };
+  function route(tier) { // returns {provider, model, baseUrl}
+    const t = (AIC.tiers || {})[tier || 'default'] || (AIC.tiers || {}).default;
+    if (t) return { provider: t.provider, model: t.model, baseUrl: t.baseUrl || BASE[t.provider] };
+    return { provider: AIC.provider, model: (AIC.models || {})[tier || 'default'] || (AIC.models || {}).default, baseUrl: AIC.baseUrl || BASE[AIC.provider] };
+  }
+  function aiKey(provider) { if (provider === 'ollama' || provider === 'lmstudio') return ''; const k0 = 'fc_ai_key_' + provider; let k = localStorage.getItem(k0) || (provider === AIC.provider ? localStorage.getItem('fc_ai_key') : '');
+    if (!k) { k = prompt('Paste the ' + provider + ' API key for this PC. It stays on this PC only.'); if (k) localStorage.setItem(k0, k.trim()); } return k || ''; }
+  window.fcSetAIKey = (provider, k) => k ? localStorage.setItem('fc_ai_key_' + provider, k) : localStorage.removeItem('fc_ai_key_' + provider);
   const toB64 = b => new Promise(r => { const fr = new FileReader(); fr.onload = () => r(String(fr.result)); fr.readAsDataURL(b); });
-  async function sample(prompt, o) {
-    o = o || {}; const tools = o.tools || []; const imgs = await Promise.all((o.images || []).map(toB64));
-    let text = '';
-    if (AIC.provider === 'anthropic') {
+  async function callModel(R, prompt, o) {
+    const tools = o.tools || []; const imgs = await Promise.all((o.images || []).map(toB64));
+    let text = '', inT = 0, outT = 0;
+    if (R.provider === 'anthropic' || R.provider === 'claude') {
       const content = imgs.map(u => ({ type: 'image', source: { type: 'base64', media_type: u.slice(5, u.indexOf(';')), data: u.split(',')[1] } })).concat([{ type: 'text', text: prompt }]);
       const msgs = [{ role: 'user', content }];
       for (let turn = 0; turn < 10; turn++) {
-        const r = await fetch((AIC.baseUrl || 'https://api.anthropic.com') + '/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': aiKey(), 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
-          body: JSON.stringify({ model: model(o.modelTier), max_tokens: 4096, messages: msgs, tools: tools.length ? tools.map(t => ({ name: t.name, description: t.description, input_schema: t.inputSchema })) : undefined }) });
+        const r = await fetch(R.baseUrl + '/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': aiKey(R.provider), 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+          body: JSON.stringify({ model: R.model, max_tokens: 4096, messages: msgs, tools: tools.length ? tools.map(t => ({ name: t.name, description: t.description, input_schema: t.inputSchema })) : undefined }) });
         const j = await r.json(); if (!r.ok) throw new Error((j.error && j.error.message) || 'AI request failed');
+        if (j.usage) { inT += j.usage.input_tokens || 0; outT += j.usage.output_tokens || 0; }
         text = j.content.filter(b => b.type === 'text').map(b => b.text).join('\n') || text; if (o.onText) o.onText({ text });
         const calls = j.content.filter(b => b.type === 'tool_use'); if (!calls.length) break;
         msgs.push({ role: 'assistant', content: j.content });
         msgs.push({ role: 'user', content: await Promise.all(calls.map(async c => { const t = tools.find(x => x.name === c.name); let out; try { out = t ? await t.execute(c.input || {}) : 'Unknown tool'; } catch (e) { out = 'Error: ' + e.message; } return { type: 'tool_result', tool_use_id: c.id, content: typeof out === 'string' ? out : JSON.stringify(out) }; })) });
       }
-    } else { // OpenAI-compatible: OpenAI, Gemini (OpenAI endpoint), Mistral, Ollama, LM Studio
-      const base = AIC.baseUrl || (AIC.provider === 'ollama' ? 'http://localhost:11434/v1' : AIC.provider === 'lmstudio' ? 'http://localhost:1234/v1' : 'https://api.openai.com/v1');
+    } else { // OpenAI-compatible: Grok (xAI), DeepSeek, OpenAI, Gemini, Mistral, Ollama, LM Studio
       const msgs = [{ role: 'user', content: imgs.length ? [{ type: 'text', text: prompt }].concat(imgs.map(u => ({ type: 'image_url', image_url: { url: u } }))) : prompt }];
-      const k = aiKey();
+      const k = aiKey(R.provider);
       for (let turn = 0; turn < 10; turn++) {
-        const r = await fetch(base + '/chat/completions', { method: 'POST', headers: Object.assign({ 'content-type': 'application/json' }, k ? { authorization: 'Bearer ' + k } : {}),
-          body: JSON.stringify({ model: model(o.modelTier), messages: msgs, tools: tools.length ? tools.map(t => ({ type: 'function', function: { name: t.name, description: t.description, parameters: t.inputSchema } })) : undefined }) });
+        const r = await fetch(R.baseUrl + '/chat/completions', { method: 'POST', headers: Object.assign({ 'content-type': 'application/json' }, k ? { authorization: 'Bearer ' + k } : {}),
+          body: JSON.stringify({ model: R.model, messages: msgs, tools: tools.length ? tools.map(t => ({ type: 'function', function: { name: t.name, description: t.description, parameters: t.inputSchema } })) : undefined }) });
         const j = await r.json(); if (!r.ok) throw new Error((j.error && (j.error.message || j.error)) || 'AI request failed');
+        if (j.usage) { inT += j.usage.prompt_tokens || 0; outT += j.usage.completion_tokens || 0; }
         const m = j.choices[0].message; text = m.content || text; if (o.onText) o.onText({ text });
         if (!m.tool_calls || !m.tool_calls.length) break;
         msgs.push(m);
@@ -118,9 +126,16 @@
           msgs.push({ role: 'tool', tool_call_id: c.id, content: typeof out === 'string' ? out : JSON.stringify(out) }); }
       }
     }
-    return { text };
+    return { text, usage: { input_tokens: inT, output_tokens: outT, provider: R.provider, model: R.model } };
   }
-  sample.json = async p => { const t = (await sample(p + '\nReturn only JSON.')).text; return JSON.parse(t.slice(t.indexOf('{'), t.lastIndexOf('}') + 1)); };
+  async function sample(prompt, o) {
+    o = o || {}; const R = route(o.modelTier);
+    try { return await callModel(R, prompt, o); }
+    catch (e) { // no internet or provider down: fall back to the offline model if one is set
+      const off = (AIC.tiers || {}).offline; if (off && R.provider !== off.provider) return callModel({ provider: off.provider, model: off.model, baseUrl: off.baseUrl || BASE[off.provider] }, prompt, o);
+      throw e; }
+  }
+  sample.json = async (p, o) => { const r = await sample(p + '\nReturn only JSON.', o); const t = r.text; const out = JSON.parse(t.slice(t.indexOf('{'), t.lastIndexOf('}') + 1)); Object.defineProperty(out, '__usage', { value: r.usage, enumerable: false }); return out; };
 
   window.claude = { use: async name => {
     if (name === 'downloads') return downloads;
@@ -128,6 +143,6 @@
     if (name === 'db') return db;
     if (name === 'user') return userCap;
     if (name === 'assets') return assets || null;
-    if (name === 'sample') return AIC.provider ? sample : null; // no provider: the app runs in no-AI mode
+    if (name === 'sample') return (AIC.provider || AIC.tiers) ? sample : null; // no provider: the app runs in no-AI mode
     return null; } };
 })();

@@ -1,0 +1,10 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1440,height:950}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
+await p.goto('file:///tmp/pt/index.html#daily');await p.waitForTimeout(3000);
+await p.$eval('[data-aiopen]',e=>e.click());await p.waitForTimeout(300);await p.fill('#aiq','plan my day');await p.$eval('form[data-f=ai] button:not([type])',e=>e.click());await p.waitForTimeout(1500);
+await p.evaluate(()=>location.hash='aicost');await p.waitForTimeout(800);
+console.log(await p.evaluate(()=>[...document.querySelectorAll('.kpi')].slice(0,4).map(e=>e.innerText.replace(/\s+/g,' '))));
+await p.$eval('form[data-f=aiprice] input[name=deepseek_quick_in]',e=>e.value='0.3');await p.$eval('form[data-f=aiprice]',f=>f.requestSubmit());await p.waitForTimeout(500);
+console.log('deepseek set',await p.evaluate(()=>!document.querySelector('#view').innerText.includes('DeepSeek\nNot set')));
+await p.screenshot({path:'aicost.png',fullPage:true});
+console.log('ERR',JSON.stringify(errs));await b.close();})();
