@@ -66,3 +66,18 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
 - **Settings:** `founders` (who counts in the check), `dailyStart` and `dailyReg`.
 - **Automations:** there are now 122 automations (29 new, for example tender deadlines, RFI ageing, milestone billing, the 8-week cash forecast and defect close-out checks). 62 of them have an "upgrade": a second version that pulls context from another register. The upgrade is shown in green and is included in the AI recipe prompt.
 - **Restore:** under Access, a backup JSON can be restored into any database. Use it to move from claude.ai to the company Firebase project (`command-centre/standalone/`).
+
+## Approvals and professionals, and the public standards bank (October 2026)
+
+- **Approvals and professionals** (under Business) has five tabs:
+  - **Approval guides:** one per authority, with steps, documents, fees and their source, official time and the date last checked. There is a button to add the 14 Kampala-area authorities. Fees and times start blank until verified.
+  - **Approval times:** reports from Formcraft projects and from other architects.
+  - **Professionals:** the directory.
+  - **Contributions:** submissions waiting for review, including AI extraction from a pasted group chat.
+  - **Website preview.**
+- **Confirm first.** Listings start Private. A confirmation message (SMS or WhatsApp text, with a WhatsApp link) asks the person to reply YES with their code. Only listings marked Confirmed or Register-checked are public. Removal deletes the phone number and email and keeps a fingerprint, so the person is not added again. Duplicates are caught by phone number or registration number. A repeat recommendation adds to the "added by N architects" count.
+- **Public approval times** show only medians and ranges, and only once an authority has 3 or more reports. Contributors are never named.
+- **Collections:** `appr_auth`, `appr_rep`, `pros`, `contrib`.
+- **Standards bank:** new fields `pub`, `webnote` and `buy`. There is a publish button on each standard and a website preview, and the public view shows reference details and Formcraft's own note only.
+- **Website data:** a "Download website data (JSON)" button exports exactly what the public pages may show. The website should read only published copies (automation WS-07 publishes them to public collections), never `pros` directly, because that collection holds private phone numbers.
+- **New automations:** WS-05 (confirmation sender), WS-06 (approval times digest), WS-07 (public data publish).
