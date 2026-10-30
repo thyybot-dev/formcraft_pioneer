@@ -172,3 +172,4 @@ A 2D architecture canvas for the design stage, in the spirit of Rayon and AutoCA
   - **Hand to drafting (JSON):** `fmc-cis/0.2` with levels, room outlines and areas against targets, walls, openings, decisions and open comments. It extends the Revit tools' `fmc-cis/0.1` with outlines. The Revit tools need a "build walls and rooms from outlines" command to use it.
 - **Collections:** `boards`, `bel` (elements), `brev` (revision log).
 - **Access:** Design and BIM and Partner roles. Owners choose tabs per person. A Client role with access to only their own boards is planned.
+- **Data explorer** (under Build and AI): every collection in the database with its record count. Search across all fields, sort by any column, open a record to see all of it, and export to Excel or JSON. What a person can see follows the database rules: admin-only collections stay empty for others.
