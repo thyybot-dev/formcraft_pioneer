@@ -1,0 +1,34 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1600,height:1000}});const errs=[];p.on('pageerror',e=>errs.push(e.message));
+const clk=async s=>{await p.$eval(s,e=>e.click());await p.waitForTimeout(400);};
+await p.goto('file:///tmp/pt/index7.html#studio');await p.waitForTimeout(3000);
+await p.fill('form[data-f=stnew] input[name=n]','Nakato house');await p.fill('form[data-f=stnew] input[name=p]','Nakato, Kira');await clk('form[data-f=stnew] button');await p.waitForTimeout(600);
+// map world mm to screen
+const toScr=async(x,y)=>p.evaluate(([x,y])=>{const svg=document.getElementById('stc');const pt=svg.createSVGPoint();pt.x=x;pt.y=y;const m=svg.getScreenCTM();const q=pt.matrixTransform(m);return [q.x,q.y];},[x,y]);
+await p.evaluate(()=>{__STV.view={x:-1500,y:-1500,w:13000};});await p.keyboard.press('v');await p.waitForTimeout(400);
+const setv=async(sel,v)=>{await p.evaluate(([sel,v])=>{const e=document.querySelector('form[data-f=stprop] '+sel);if(e.type==='checkbox')e.checked=!!v;else e.value=v;},[sel,v]);};
+const click=async(x,y)=>{const [sx,sy]=await toScr(x,y);await p.mouse.click(sx,sy);await p.waitForTimeout(250);};
+await p.keyboard.press('w');await p.waitForTimeout(300);
+for(const [x,y] of [[0,0],[10000,0],[10000,8000],[0,8000],[0,0]])await click(x,y);
+await p.keyboard.press('Escape');await p.waitForTimeout(300);
+await p.keyboard.press('w');await click(5000,0);await click(5000,8000);await p.keyboard.press('Escape');await p.waitForTimeout(300);
+console.log('walls',await p.evaluate(()=>document.querySelectorAll('#stc polygon').length));
+await p.keyboard.press('r');await p.waitForTimeout(300);for(const [x,y] of [[0,0],[5000,0],[5000,8000],[0,8000],[0,0]])await click(x,y);await p.waitForTimeout(600);
+await setv('input[name=name]','Living room');await setv('select[name=use]','Living');await setv('input[name=target]','35');await p.$eval('form[data-f=stprop]',f=>f.requestSubmit());await p.waitForTimeout(500);
+await p.keyboard.press('r');await p.waitForTimeout(300);for(const [x,y] of [[5000,0],[10000,0],[10000,4000],[5000,4000],[5000,0]])await click(x,y);await p.waitForTimeout(600);
+await setv('input[name=name]','Bedroom 1');await setv('select[name=use]','Bedroom');await p.$eval('form[data-f=stprop]',f=>f.requestSubmit());await p.waitForTimeout(500);
+await p.keyboard.press('d');await p.waitForTimeout(300);await click(2500,8000);await p.keyboard.press('n');await p.waitForTimeout(300);await click(7500,0);
+await p.keyboard.press('m');await p.waitForTimeout(300);await click(0,8000);await click(10000,8000);
+await p.keyboard.press('c');await p.waitForTimeout(300);await click(7500,6000);await p.waitForTimeout(500);await setv('textarea[name=text]','Client wants a bigger kitchen');await p.$eval('form[data-f=stprop]',f=>f.requestSubmit());await p.waitForTimeout(500);
+await p.keyboard.press('v');await p.waitForTimeout(300);
+// move the partition wall by drag
+const [ax,ay]=await toScr(5000,6000);await p.mouse.move(ax,ay);await p.mouse.down();await p.mouse.move(ax-30,ay,{steps:5});await p.mouse.up();await p.waitForTimeout(700);
+await p.$eval('form[data-f=stdec] input[name=t]',e=>e.value='Open-plan kitchen and living agreed');await clk('form[data-f=stdec] button');
+await p.$eval('form[data-f=stai] textarea[name=q]',e=>e.value='Move the partition 300 left');await clk('form[data-f=stai] button');await p.waitForTimeout(1500);
+await clk('[data-stfit]');await p.screenshot({path:'studio.png'});
+console.log('log',await p.evaluate(()=>[...document.querySelectorAll('#view .card')].map(c=>c.innerText).find(t=>t.startsWith('Revision sheet')||t.includes('Revision sheet'))?.slice(0,500)));
+await clk('[data-stundo]');await p.waitForTimeout(500);
+await clk('[data-strev]');await p.waitForTimeout(1500);console.log('sheets',await p.$$eval('[data-stsheet]',x=>x.map(e=>e.innerText)));
+await clk('[data-stlevel]');await p.waitForTimeout(1500);console.log('sheets',await p.$$eval('[data-stsheet]',x=>x.map(e=>e.innerText)));
+await clk('[data-stexp=cis]');await clk('[data-stexp=svg]');
+console.log('ERR',JSON.stringify(errs));await b.close();})();

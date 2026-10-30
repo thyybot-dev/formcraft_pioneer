@@ -141,3 +141,34 @@ Default: signed-in people read; Contributors write. Admin only (read and write):
   - **Automation VC-08** records each tutorial by running its steps in Revit through the MCP tools while capturing the screen.
   - **Automation VC-09** assembles the video: zooms, captions, narration or silent with music, brand intro and outro, a vertical crop for Shorts, and a thumbnail.
 - **Tabs per person** (Access, owner only). The owner can tick exactly which tabs each person sees (`settings.tabs[uid]`). This overrides the role's tabs. "Use the role's tabs" removes the override. Admin-only data stays locked in the database whatever is ticked. In the Windows hub, Emlyn's PC is the main hub and controls the other founders' tabs the same way.
+
+## Design studio (October 2026)
+
+A 2D architecture canvas for the design stage, in the spirit of Rayon and AutoCAD: sketch layouts with clients, talk through changes, keep revision sheets, then hand the agreed sheet to drafting.
+
+- **Canvas.**
+  - Units are millimetres.
+  - Scroll to zoom. Drag empty space, or use the middle button or Space, to pan.
+  - Points snap to 50 mm and to the ends of walls and room corners. Press G to switch snapping off; hold Shift for straight lines.
+  - Fit frames the drawing.
+- **Tools** (with their keys):
+  - Select and move (V). Drag an element to move it, or drag its handles to reshape walls, dimensions and rooms.
+  - Wall (W): click point to point, double-click or Esc to end.
+  - Room (R): click the corners and close on the first point. Rooms are tinted by use and show their name and live area. The area turns red when it is more than 10% off the brief's target.
+  - Door (D) and Window (N): snap onto the nearest wall and take its angle and thickness.
+  - Dimension (M), Text (T), Sketch (P), Comment (C, numbered pins).
+  - Import image (I): drop in a sketch or survey to trace, with adjustable see-through and a lock.
+- **Properties panel:** wall length, thickness and kind; room name, use and target area; door width, hinge and swing; window width and sill; and more.
+- **Design assistant:** an instruction in plain words ("move the kitchen wall 300 left") becomes edits made through the same tools. If an instruction is unclear, the assistant pins a question as a comment instead. Every change is logged, and Undo (Ctrl+Z) reverses changes one by one.
+- **Sheets:**
+  - Each board has sheets per floor and revision.
+  - **+ Revision** copies the sheet as the next letter.
+  - **+ Floor** adds the next floor with the outer walls copied.
+  - Sheet names and floor levels can be edited.
+- **Revision sheet:** an automatic log of every change (who, what, when), plus decisions logged by hand.
+- **Outputs:**
+  - **Sheet (SVG)** with a title block.
+  - **Print or PDF:** the sheet plus its change and decision log and its comments.
+  - **Hand to drafting (JSON):** `fmc-cis/0.2` with levels, room outlines and areas against targets, walls, openings, decisions and open comments. It extends the Revit tools' `fmc-cis/0.1` with outlines. The Revit tools need a "build walls and rooms from outlines" command to use it.
+- **Collections:** `boards`, `bel` (elements), `brev` (revision log).
+- **Access:** Design and BIM and Partner roles. Owners choose tabs per person. A Client role with access to only their own boards is planned.
