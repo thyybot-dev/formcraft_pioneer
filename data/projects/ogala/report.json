@@ -1,0 +1,21 @@
+{
+  "project": "The Ogala Residence",
+  "presenter": "Emlyn Atochon",
+  "firm": "Formcraft",
+  "prelims_pct": 12,
+  "contingency_pct": 10,
+  "structure_report": "https://claude.ai/artifact/2oNvmyawNmg8kiQBxjkVET",
+  "cost_mode": "materials",
+  "links": {
+    "project": "https://claude.ai/artifact/YSsMoq94zNtFexKGZAtneH",
+    "architecture": {"review": "https://claude.ai/artifact/56ZDJonjP8gbdkKqTHQ9qF", "signer": "the architect"},
+    "structure": {"report": "https://claude.ai/artifact/2oNvmyawNmg8kiQBxjkVET", "review": "https://claude.ai/artifact/TJ35ZT5D3X8NQDJ4LCP3Z2", "signer": "the structural engineer of record"},
+    "plumbing": {"review": "https://claude.ai/artifact/3N9xqwWetNUKJYPw9QQdY9", "signer": "the plumbing and drainage engineer"},
+    "electrical": {"review": "https://claude.ai/artifact/RnpQUCGqbMyYVPAwjFT72W", "signer": "the electrical engineer"},
+    "mechanical": {"review": "https://claude.ai/artifact/VZt7MsBRdH7V4ety6kixMw", "signer": "the mechanical engineer"},
+    "interiors": {"review": "https://claude.ai/artifact/U6wddrHrKVZZCsPixuzazZ", "signer": "the interior designer"},
+    "fire": {"review": "https://claude.ai/artifact/1eJRo3AnRTyro1DDVCEpYc", "signer": "the fire engineer"},
+    "external": {"review": "https://claude.ai/artifact/GcAnP3mD4MggXaXifSSMwT", "signer": "the civil engineer"},
+    "landscape": {"review": "https://claude.ai/artifact/DJQ47tZqbD1JWVPPD8pcJG", "signer": "the landscape architect"}
+  }
+}
