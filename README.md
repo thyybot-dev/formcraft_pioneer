@@ -13,6 +13,7 @@ Everything behind the plan to make **Formcraft Design and Construction** (Kampal
 | `docs/` | How the Command Centre works, the data model, and the log of everything asked for. |
 | `tools/` | `build_report.py` rebuilds the branded PDFs; test harness for the Command Centre. |
 | `mcp-server/` | MCP server so any AI (Claude, OpenAI, local models) can use Command Centre data, memory and agents |
+| `radar/` | **Formcraft Radar**: feasibility study (`Formcraft-Radar-Feasibility-Study.md`), the ideas log, the 5-year Monte Carlo model (base and sceptic) and its charts. Finds people about to build and jobs for makers. |
 | `rulebooks/` | One rulebook per AI agent (`agents/`) and the client onboarding and offboarding playbooks |
 
 Live versions: the Command Centre at https://claude.ai/artifact/QZwNFsyfC1TNZJeJu5PiRG and the Pioneer document at https://claude.ai/artifact/XhHE8xqA6KbhMHiAdjqtaw (private to the owner).
