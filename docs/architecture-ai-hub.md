@@ -175,3 +175,20 @@ Formcraft needs many PCs and phones on the same data. A JSON file or a SQLite fi
 - Offline models are an optional download in the app's settings, so PCs that only use cloud AI stay light.
 
 **Choosing the model:** run `tools/offline-model-test/` on 2–3 current 7–8B models that support tool calling. Pick the one that passes the most Formcraft tasks: valid tool calls, valid JSON, sensible actions. Speed is the tie-breaker. Repeat the test whenever a new model family is released. Because agents ask for a tier, not a model name, switching means changing one setting.
+
+
+## 11. The AI layers (31 October 2026)
+
+A company AI is not the model; it is everything around it. Each Formcraft agent now passes through five layers. Source: `command-centre/ai-layers.js` (synced into the app by `tools/sync_ai_layers.py`) and `mcp-server/server.js`.
+
+| Layer | What it does | Where |
+|---|---|---|
+| 1. Rulebook and standards first | Every question gets the agent's rulebook (`rulebooks/agents/<key>.md`), the Rule and Decision memories, and the standards clauses that match it, country first. Agents cite clauses as `[code cl ref]`. A technical answer that cites none is sent back once to be rewritten. When the bank has no clause, the answer is marked `NO STANDARD IN BANK` instead of guessed. Tools: `consult_standards` (app and server), `rules_for` (server). | app and server |
+| 2. Access | Finance, people and legal agents, their memory and their past exchanges are for Admin and Manager only. The MCP server takes a role (`FORMCRAFT_ROLE`, default Staff) and blocks money, people and contract data for Staff and Partner. | app and server |
+| 3. Guardrails | Records and tool results are scanned for instructions aimed at the AI; hits are flagged in the prompt, to the user and in the trace. Phones, emails, national ID, TIN and account numbers are masked before anything leaves for a model. Unknown action types are rejected. Answers that claim a change is done while it waits for approval are corrected. | app and server |
+| 4. Cost | Simple lookups go to the small model (never for design, projects or legal, or any standards question). The same question on the same data within 6 hours is answered from cache. At 100% of an agent budget or the company cap, answers switch to the small model; at 120% only Admins can ask. | app |
+| 5. Traces and evals | Every answer logs its tier, tools, standards given and cited, gaps, guard flags and masking (`ailog.trace`); the AI hub shows the AI checks and the topics to digest next. `tools/test_ai_layers.js` and `tools/test_mcp_layers.js` run on every push (`.github/workflows/ai-checks.yml`); `tools/offline-model-test/` now also checks that a model consults standards and resists injected instructions. | app, server, CI |
+
+**The standards bank is the limit.** Agents can only apply standards whose clauses have been digested (Standards → Digest). The 319-row bank lists titles; the "Digest these next" list on the AI hub shows which ones questions need first.
+
+**Rule for changes:** edit prompts, rulebooks or agent tools only in the repo, run `python3 tools/sync_ai_layers.py`, then both test files, then publish.

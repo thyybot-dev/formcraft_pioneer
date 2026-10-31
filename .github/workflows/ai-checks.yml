@@ -1,0 +1,19 @@
+# Runs the AI layer checks on every push and pull request, so no change to a prompt, rulebook or agent tool
+# reaches the live Command Centre without passing them (the "evals before every prompt change" rule).
+name: AI checks
+on: [push, pull_request]
+jobs:
+  ai-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Rulebooks and AI layers are in sync with the app
+        run: |
+          python3 tools/sync_ai_layers.py
+          git diff --exit-code command-centre/ || (echo "Run python3 tools/sync_ai_layers.py and commit the result" && exit 1)
+      - run: sh tools/check_syntax.sh
+      - run: node tools/test_mcp_layers.js
+      - run: npm install --no-save playwright@1 && npx playwright install --with-deps chromium
+      - run: node tools/test_ai_layers.js
